@@ -43,8 +43,28 @@
 # Was gibt es am Ende zurück?
 
 # A5:
-# Erstelle eine Funktion mit einem Argument "n", die die Zahlen 0 bis n
-# summiert!
+# Erstelle eine rekursive Funktion mit einem Argument "n",
+# die die Zahlen 0 bis n summiert!
 
 # A6:
-# Erstelle eine rekursive Funktion, die die Fakultät einer Zahl ausrechnet!
+# Erstelle eine rekursive Funktion mit einem Argument "n",
+# die die Fakultät von n ausrechnet!
+
+# A7
+# Erstelle eine rekursive Funktion mit einem Argument "n",
+# die zählt, wie viele Stellen n hat! Was soll der Rekursionsargument sein?
+
+# A8
+# Erstelle eine rekursive Funktion mit einem Argument "n",
+# die die Stellen von n summiert! Was soll der Rekursionsargument sein?
+
+# Hier das Fraktalbild:
+
+def fractal(n: int, output=None):
+    if output is None:
+        output = [[]]
+ 
+# A9
+# Erstelle eine rekursive Funktion mit einem Argument "n",
+# die eine ASCII-Fraktalbild ausprintet.
+# .
