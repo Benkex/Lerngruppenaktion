@@ -30,13 +30,21 @@
 
 # A3:
 # Erstelle eine Funktion mit einem Argument "n", die erst mal ihre Argument
-# ausprintet, dann als Rückkehrwert die 1 + sich selbst (mit Argument n-1)
+# ausprintet, dann als Rückkehrwert 1 + sich selbst (mit Argument n-1)
 # zurückgibt, falls n > 1.
 # Andernfalls soll sie 1 zurückgeben.
+# Was gibt es am Ende zurück?
 
 # A4:
+# Erstelle eine Funktion mit einem Argument "n", die erst mal ihre Argument
+# ausprintet, dann als Rückkehrwert die zweifache von sich selbst (mit Argument n-1)
+# zurückgibt, falls n > 1.
+# Andernfalls soll sie 2 zurückgeben.
+# Was gibt es am Ende zurück?
+
+# A5:
 # Erstelle eine Funktion mit einem Argument "n", die die Zahlen 0 bis n
 # summiert!
 
-# A5:
+# A6:
 # Erstelle eine rekursive Funktion, die die Fakultät einer Zahl ausrechnet!
