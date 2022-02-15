@@ -50,21 +50,17 @@
 # Erstelle eine rekursive Funktion mit einem Argument "n",
 # die die Fakultät von n ausrechnet!
 
-# A7
-# Erstelle eine rekursive Funktion mit einem Argument "n",
-# die zählt, wie viele Stellen n hat! Was soll der Rekursionsargument sein?
 
-# A8
-# Erstelle eine rekursive Funktion mit einem Argument "n",
-# die die Stellen von n summiert! Was soll der Rekursionsargument sein?
+# Fraktalbild: (unter Arbeit)
 
-# Hier das Fraktalbild:
-
-def fractal(n: int, output=None):
+def fractal(n: int, output=None, x=None, y=None):
     if output is None:
-        output = [[]]
+        output = [["." for _ in range(n)] for _ in range(n)]
+
+    else:
+        # fractal()
+        ...
  
-# A9
 # Erstelle eine rekursive Funktion mit einem Argument "n",
 # die eine ASCII-Fraktalbild ausprintet.
 # .
