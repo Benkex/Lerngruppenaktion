@@ -21,39 +21,40 @@ erweitere `try_rekursion` so, dass das letzte was ausgeprintet wird, eine 0 ist!
 - Und wenn es negativ ist? Du kannst eine if-Bedingung dafür schreiben!
 
 ## A2:
-Erstelle eine Funktion `count_down`, die als Argument eine ganze Zahl `n` nimmt.
+Erstelle eine Funktion `count_down`, die als Argument eine *positive* ganze Zahl `n` nimmt.
 (`n` darf nicht negativ sein -> wenn es trotzdem negativ ist, erzeuge ein RuntimeError!).
 - `count_down` soll zuerst ihr Argument ausprinten
 - dann wenn `n > 1` gilt, sich selbst zurückgibt mit Argument `n - 1`
 - ansonsten soll `count_down` einfach 1 zurückgeben
 
 ## A3:
-Erstelle eine Funktion `count_to_n`, die als Argument eine ganze Zahl `n` nimmt.
+Erstelle eine Funktion `count_to_n`, die als Argument eine positive ganze Zahl `n` nimmt.
 - `count_to_n` soll zuerst ihr Argument ausprinten
 - dann wenn `n > 1` gilt,  1 + sich selbst zurückgibt mit Argument `n - 1`
 - ansonsten soll `count_to_n` einfach 1 zurückgeben
 > Was gibt `count_to_n` am Ende zurück?
 
 ## A4:
-Erstelle eine Funktion `double_up`, die als Argument eine ganze Zahl `n` nimmt.
+Erstelle eine Funktion `double_up`, die als Argument eine positive ganze Zahl `n` nimmt.
 - `double_up` soll zuerst ihr Argument ausprinten
-- dann das zweifach ven sich selbst mit Argument `n - 1` zurückgibt, falls `n > 1` gilt.
+- dann das Zweifache von sich selbst mit Argument `n - 1` zurückgibt, falls `n > 1` gilt.
 - ansonsten soll 2 zurückgeben werden
 > Was gibt `double_up` am Ende zurück?
 
 ## A5:
-Erstelle eine Funktion `sum_up`, die als Argument eine ganze Zahl `n` nimmt.
+Erstelle eine Funktion `sum_up`, die als Argument eine positive ganze Zahl `n` nimmt.
 und dann alle Zahlen von `n` bis `0` aufsummiert.(`n + (n - 1) + ... + 2 + 1 + 0`)
 und diesen Wert dann zurückgibt.
 
 ## A6:
-Erstelle eine rekursive Funktion `fakul`, die die Fakultät einer Zahl ausrechnet!
-die Fakultät einer Zahl `n` berechnet sich als Produkt aller Zahlen von `1` bis `n`.
+Erstelle eine rekursive Funktion `fakul`,  die als Argument eine positive ganze Zahl `n` nimmt
+und die Fakultät von n ausrechnet! Die Fakultät einer Zahl `n` berechnet sich
+als Produkt aller Zahlen von `1` bis `n`.
 `n! = 1 * 2 * ...* (n - 1) * n`.
 anschlieβend soll `fakul` den berechneten Wert zurückgeben.
 
 ## A7
-Erstell eine rekursive Funktion `fib`, die eine ganze Zahl als Argument nimmt.
+Erstell eine rekursive Funktion `fib`, die als Argument eine positive ganze Zahl `n` nimmt,
 Und die n-te Fibonaccizahl berechnet.
 Dabei gilt:
 - `fib(0) = 0`
