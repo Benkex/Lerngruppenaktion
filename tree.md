@@ -15,6 +15,7 @@ Ergänze die Datenklasse BinaryNode mit folgenden Instanzen:
 > Wenn du so was (z.B. `__str__`) definierst,
 > macht python im Hintergrund was komisches, und interpretiert es diese Methode als etwas ganz anderes.
 > Man kann sich merken: **`str(object)` z.B. wird durch python als `object.__str__()` interpretiert.**
+
 > Wenn du ein list `L = [1, 2, 3]` hast und `print(str(L))` schreibst, wird es im Hintergrund eigentlich
 > als `print(L.__str__())` aufgeführt.
 > Wenn eine Dundermethode auch ein / mehrere Argumente nimmt, dann ist es entweder
@@ -30,7 +31,9 @@ Ergänze die Datenklasse BinaryNode mit folgenden Instanzen:
 ## A2
 Erweiter die Datenklasse BinaryNode um die Dundermethode `__str__`, konvertiere da alle Instanzen (id, left, right) zu einem string, füge diese zueinander hin, und gib das Ergebnis zurück (mit einem return)! Was ist deine Beobachtung? Taucht hier Rekursion auf? Wenn ja, warum?
 > Man hätte die Aufgabenstellung auch so formulieren können: `str(tree)` soll einen String zurückgeben, mit dem man die BinaryNode wieder einfach rekreieren kann.
+
 > `tree = BinaryNode(1, BinaryNode(2, None, BinaryNode(3, None, None)), None)`
+
 > `str(tree) == "BinaryNode(1, BinaryNode(2, None, BinaryNode(3, None, None)), None)"`
 
 ## A3
