@@ -59,4 +59,4 @@ Dabei gilt:
 - `fib(0) = 0`
 - `fib(1) = 1`
 - `fib(n) = fib(n - 1) + fib(n - 2)
-und diese zum Schluss zurückgibt.
+und diese zum Schluss zurückgibt.`
