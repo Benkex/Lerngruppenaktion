@@ -49,18 +49,3 @@
 # A6:
 # Erstelle eine rekursive Funktion mit einem Argument "n",
 # die die Fakultät von n ausrechnet!
-
-
-# Fraktalbild: (unter Arbeit)
-
-def fractal(n: int, output=None, x=None, y=None):
-    if output is None:
-        output = [["." for _ in range(n)] for _ in range(n)]
-
-    else:
-        # fractal()
-        ...
- 
-# Erstelle eine rekursive Funktion mit einem Argument "n",
-# die eine ASCII-Fraktalbild ausprintet.
-# .
