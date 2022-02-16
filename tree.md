@@ -29,7 +29,7 @@ Ergänze die Datenklasse BinaryNode mit folgenden Instanzen:
 > Verrückt, ne?
 
 ## A2
-Erweiter die Datenklasse BinaryNode um die Dundermethode `__str__`, konvertiere da alle Instanzen (id, left, right) zu einem string, füge diese zueinander hin, und gib das Ergebnis zurück (mit einem return)! Was ist deine Beobachtung? Taucht hier Rekursion auf? Wenn ja, warum?
+Erweiter die Datenklasse BinaryNode um die Dundermethode `__str__`, konvertiere da alle Instanzen: `id`, `left` und `right` zu einem string, füge diese zueinander hinzu, und gib das Ergebnis zurück (mit einem return)! Was ist deine Beobachtung? Taucht hier Rekursion auf? Wenn ja, warum?
 > Man hätte die Aufgabenstellung auch so formulieren können: `str(tree)` soll einen String zurückgeben, mit dem man die BinaryNode wieder einfach rekreieren kann.
 
 > `tree = BinaryNode(1, BinaryNode(2, None, BinaryNode(3, None, None)), None)`
