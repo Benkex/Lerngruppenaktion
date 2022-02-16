@@ -50,8 +50,8 @@ Erweiter die Datenklasse BinaryNode um die Methode `size`, welche uns zurückgeb
 `assert tree.size() == 3`
 
 ## A4
-Erweiter die Datenklasse BinaryNode um die Methode `get_depth`, welche uns die Anzahl an BinaryNodes zurückgeben soll, die auf dem längsten Pfad von der Würzel aus zu finden sind. It's Rekursion, my dudes! Ich empfehle dir eine **optionale** Hilfsargument `depth` zu benutzen, wenn du ein "Rekursionsschicht tiefer gehst" (d.h. die Funktion in sich selbst aufrufst), kannst du `depth + 1` angeben und damit merken, wie tief wir sind.
-- `depth` kann am Anfang als 1 (erste Schicht) initialisiert werden (`def ...(..., depth=1):`). 
+Erweiter die Datenklasse BinaryNode um die Methode `get_depth`, welche uns die Anzahl an BinaryNodes zurückgeben soll, die auf dem längsten Pfad von der Würzel aus zu finden sind. It's Rekursion, my dudes!
+
 Überlege einen sinnvollen Rückgabewert! Wie oft musst du `get_depth` in sich selbst aufrufen? An welche Stelle wäre es am sinnvollsten, sie aufzurufen?
 
 `tree = BinaryNode(1, None, None)`
