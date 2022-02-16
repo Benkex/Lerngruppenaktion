@@ -28,36 +28,36 @@ Erstelle eine Funktion `count_down`, die als Argument eine *positive* ganze Zahl
 - ansonsten soll `count_down` einfach 1 zurückgeben
 
 ## A3:
-Erstelle eine Funktion `count_to_n`, die als Argument eine positive ganze Zahl `n` nimmt.
+Erstelle eine Funktion `count_to_n`, die als Argument eine *positive* ganze Zahl `n` nimmt.
 - `count_to_n` soll zuerst ihr Argument ausprinten
 - dann wenn `n > 1` gilt,  1 + sich selbst zurückgibt mit Argument `n - 1`
 - ansonsten soll `count_to_n` einfach 1 zurückgeben
 > Was gibt `count_to_n` am Ende zurück?
 
 ## A4:
-Erstelle eine Funktion `double_up`, die als Argument eine positive ganze Zahl `n` nimmt.
+Erstelle eine Funktion `double_up`, die als Argument eine *positive* ganze Zahl `n` nimmt.
 - `double_up` soll zuerst ihr Argument ausprinten
 - dann das Zweifache von sich selbst mit Argument `n - 1` zurückgibt, falls `n > 1` gilt.
 - ansonsten soll 2 zurückgeben werden
 > Was gibt `double_up` am Ende zurück?
 
 ## A5:
-Erstelle eine Funktion `sum_up`, die als Argument eine positive ganze Zahl `n` nimmt 
+Erstelle eine Funktion `sum_up`, die als Argument eine *positive* ganze Zahl `n` nimmt 
 und dann alle Zahlen von `n` bis `0` aufsummiert. (`n + (n - 1) + ... + 2 + 1 + 0`)
 und diesen Wert dann zurückgibt.
 
 ## A6:
-Erstelle eine rekursive Funktion `fakul`,  die als Argument eine positive ganze Zahl `n` nimmt 
+Erstelle eine rekursive Funktion `fakul`,  die als Argument eine *positive* ganze Zahl `n` nimmt 
 und die Fakultät von n ausrechnet! Die Fakultät einer Zahl `n` berechnet sich 
 als Produkt aller Zahlen von `1` bis `n`.
 `n! = 1 * 2 * ...* (n - 1) * n`.
 anschlieβend soll `fakul` den berechneten Wert zurückgeben.
 
 ## A7
-Erstell eine rekursive Funktion `fib`, die als Argument eine positive ganze Zahl `n` nimmt,
+Erstell eine rekursive Funktion `fib`, die als Argument eine *positive* ganze Zahl `n` nimmt,
 Und die n-te Fibonaccizahl berechnet.
 Dabei gilt:
 - `fib(0) = 0`
 - `fib(1) = 1`
-- `fib(n) = fib(n - 1) + fib(n - 2)
-und diese zum Schluss zurückgibt.`
+- `fib(n) = fib(n - 1) + fib(n - 2)`
+und diese zum Schluss zurückgibt.
