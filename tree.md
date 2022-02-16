@@ -34,8 +34,8 @@ Erweiter die Datenklasse BinaryNode um die Methode `depth`, welche uns die Anzah
 `tree.depth() == 3`
 
 ## A5
-Erweiter die Datenklasse BinaryNode um die Methode `pre_order`, die uns eine Liste aller `id`s zurückgibt. Sodass die Liste zuerst die `id` von dem Wurzelknoten, dann alle `id`s des linken Teilbaumes `left`, und zum Schluss alle `id`s des rechten Teilbaumes `right` enthält. Die `id`s der Teilbäume soll wieder so sortiert sein wie oben beschrieben.
+Erweiter die Datenklasse BinaryNode um die Methode `post_order`, die uns eine Liste aller `id`s zurückgibt. Sodass die Liste zuerst alle `id`s des linken Teilbaumes `left`, dann alle `id`s des rechten Teilbaumes `right`, und zum Schluss die `id` von dem Wurzelknoten enthält. Die `id`s der Teilbäume soll wieder so sortiert sein wie oben beschrieben.
 
 `tree = BinaryNode(1, BinaryNode(2, None, None), BinaryNode(3, None, BinaryNode(4, None, None)))`
 
-`tree.pre_order() == [1, 2, 3, 4]`
+`tree.post_order() == [2, 4, 3, 1]`
