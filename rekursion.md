@@ -42,13 +42,13 @@ Erstelle eine Funktion `double_up`, die als Argument eine positive ganze Zahl `n
 > Was gibt `double_up` am Ende zurück?
 
 ## A5:
-Erstelle eine Funktion `sum_up`, die als Argument eine positive ganze Zahl `n` nimmt.
-und dann alle Zahlen von `n` bis `0` aufsummiert.(`n + (n - 1) + ... + 2 + 1 + 0`)
+Erstelle eine Funktion `sum_up`, die als Argument eine positive ganze Zahl `n` nimmt 
+und dann alle Zahlen von `n` bis `0` aufsummiert. (`n + (n - 1) + ... + 2 + 1 + 0`)
 und diesen Wert dann zurückgibt.
 
 ## A6:
-Erstelle eine rekursive Funktion `fakul`,  die als Argument eine positive ganze Zahl `n` nimmt
-und die Fakultät von n ausrechnet! Die Fakultät einer Zahl `n` berechnet sich
+Erstelle eine rekursive Funktion `fakul`,  die als Argument eine positive ganze Zahl `n` nimmt 
+und die Fakultät von n ausrechnet! Die Fakultät einer Zahl `n` berechnet sich 
 als Produkt aller Zahlen von `1` bis `n`.
 `n! = 1 * 2 * ...* (n - 1) * n`.
 anschlieβend soll `fakul` den berechneten Wert zurückgeben.
