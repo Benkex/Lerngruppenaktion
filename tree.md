@@ -50,17 +50,17 @@ Erweiter die Datenklasse BinaryNode um die Methode `size`, welche uns zurückgeb
 `assert tree.size() == 3`
 
 ## A4
-Erweiter die Datenklasse BinaryNode um die Methode `get_depth`, welche uns die Anzahl an BinaryNodes zurückgeben soll, die auf dem längsten Pfad von der Würzel aus zu finden sind. It's Rekursion, my dudes!
+Erweiter die Datenklasse BinaryNode um die Methode `depth`, welche uns die Anzahl an BinaryNodes zurückgeben soll, die auf dem längsten Pfad von der Würzel aus zu finden sind. It's Rekursion, my dudes!
 
-Überlege einen sinnvollen Rückgabewert! Wie oft musst du `get_depth` in sich selbst aufrufen? An welche Stelle wäre es am sinnvollsten, sie aufzurufen?
+Überlege einen sinnvollen Rückgabewert! Wie oft musst du `depth` in sich selbst aufrufen? An welche Stelle wäre es am sinnvollsten, sie aufzurufen?
 
 `tree = BinaryNode(1, None, None)`
 
-`tree.get_depth() == 1`
+`tree.depth() == 1`
 
 `tree = BinaryNode(1, BinaryNode(2, None, None), BinaryNode(3, None, BinaryNode(4, None, None)))`
 
-`tree.get_depth() == 3`
+`tree.depth() == 3`
 
 ## A5
 Erweiter die Datenklasse BinaryNode um die Methode `pre_order`, die uns eine Liste aller `id`s zurückgibt. Sodass die Liste zuerst die `id` von dem Wurzelknoten, dann alle `id`s des linken Teilbaumes `left`, und zum Schluss alle `id`s des rechten Teilbaumes `right` enthält. Die `id`s der Teilbäume soll wieder so sortiert sein wie oben beschrieben.
