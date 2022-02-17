@@ -35,3 +35,17 @@ def find(tree, id):
 
 def select(tree, lower, upper):
     pass
+
+
+@dataclass
+class Node:
+    
+    def __str__(self):
+        pass
+
+    def weight(self):
+        pass
+
+
+def on_layer(tree, depth):
+    pass
