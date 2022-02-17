@@ -49,3 +49,7 @@ class Node:
 
 def on_layer(tree, depth):
     pass
+
+
+def leaves(tree):
+    pass
