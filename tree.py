@@ -4,9 +4,16 @@ from typing import Optional
 
 @dataclass
 class BinaryNode:
+    id: int
+    left: "Optional[BinaryNode]"
+    right: "Optional[BinaryNode]"
 
-    def __str__(self):
-        pass
+    # bNode = BinaryNode(1, None, None)
+    # print(str(bNode))
+    def __str__(self) -> str:
+        # print(f"{id} {id}")
+        # print(str(id)+" "+str(id))
+        return "BinaryNode("+str(self.id)+", "+self.left.__str__()+", "+str(self.right)+")"
 
     def size(self):
         pass
