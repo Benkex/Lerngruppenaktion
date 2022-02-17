@@ -1,10 +1,11 @@
 from dataclasses import dataclass
+from typing import Optional
 
 
 @dataclass
 class BinaryNode:
 
-	def __str__(self):
+    def __str__(self):
         pass
 
     def size(self):
@@ -13,5 +14,24 @@ class BinaryNode:
     def depth(self):
         pass
 
-    def pre_order(self):
+    def post_order(self):
         pass
+
+    def flip(self):
+        pass
+
+
+def insert(tree: Optional[BinaryNode], id: int):
+    pass
+
+
+def create_tree(ids):
+    pass
+
+
+def find(tree, id):
+    pass
+
+
+def select(tree, lower, upper):
+    pass

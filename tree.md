@@ -39,3 +39,29 @@ Erweiter die Datenklasse BinaryNode um die Methode `post_order`, die uns eine Li
 `tree = BinaryNode(1, BinaryNode(2, None, None), BinaryNode(3, None, BinaryNode(4, None, None)))`
 
 `tree.post_order() == [2, 4, 3, 1]`
+
+## A6
+Erweiter die Datenklass BinaryNode um die Methode `flip`, die uns den Baum umdreht. Umdrehen heißt, dass für jeden Knoten der rechte mit dem linken Teilbaum vertauscht wird.
+
+`tree = BinaryNode(1, BinaryNode(2, None, None), BinaryNode(3, None, BinaryNode(4, None, None)))`
+
+`tree.flip()`
+
+`str(tree) == str(BinaryNode(1, BinaryNode(3, BinaryNode(4, None, None), None), BinaryNode(2, None, None)))`
+
+### Suchbäume
+Als nächstes wollen wir uns einen speziellen Binärbaum anschauen, den Suchbaum.
+Ein Suchbaum unterscheidet sich von einem Binärbaum nur in dem Detail, dass in Suchbäumen, die `id`s des linken Teilbaumes immer kleiner sind als die `id` des Elternknotens, und die `id`s des rechten Teilbaumes sind immer größer.
+
+## A7
+Schreibe die Funktion `insert(tree: Optional[BinaryNode], id: int)`, die die `id` in den Baum so einfügt, dass die Suchbaumbedingungen erfüllt bleiben. Und den resultierenden Suchbaum zurückgibt, falls `tree` None ist soll ein Suchbaum erstellt werden.
+
+## A8
+Schreibe die Funktion `create_tree`, welche aus einer Liste an `id`s einen Suchbaum erstellt.
+
+## A9
+Schreibe die Funktion `find`, welche einen `tree` und eine `id` als Argumente nimmt. `find` soll die BinaryNode im Suchbaum finden, bei dem die `id` übereinstimmt und diese dann zurück gibt. Nutze dafür die Struktur des Suchbaumes. Wenn die `id` im Suchbaum nicht gefunden wurde soll None zurück gegeben werden.
+
+## A10
+Schreibe die Funktion `select`, die aus einem Suchbaum `tree` alle `id`s ausgibt für die gilt, lower <= id <= upper. die `id` sollen aufsteigend soltiert sein, nutze dafür allerdings nicht sort, oder sorted.
+
