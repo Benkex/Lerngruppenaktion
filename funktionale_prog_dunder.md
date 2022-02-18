@@ -29,12 +29,12 @@ Enter source value: 42.0
 Enter target unit [C / F / K]: K
 42.0 C corresponds to 315.15 K
 ```
-> Gehen Sie dabei wie folgt vor:
-(a) Definieren Sie die folgenden Funktionen:
-– celsius_to_fahrenheit
-– fahrenheit_to_celsius
-– celsius_to_kelvin
-– kelvin_to_celsius
+> Gehen Sie dabei wie folgt vor:\
+(a) Definieren Sie die folgenden Funktionen:\
+– celsius_to_fahrenheit\
+– fahrenheit_to_celsius\
+– celsius_to_kelvin\
+– kelvin_to_celsius\
 Die Funktionen sollen die Temperatur als Argument vom Typ float entgegen nehmen und die entsprechend konvertierte Temperatur als Wert vom Typ
 float zurückgeben.
 Wie in der vorherigen Aufgabe, sollen diese Funktionen keine Side-Effects haben.
@@ -43,9 +43,9 @@ Beispielaufruf:
 >>> celsius_to_fahrenheit(42.0)
 107.6
 ```
-> (b) (2 Punkte) Definieren Sie die Funktionen
-> – fahrenheit_to_kelvin
-> – kelvin_to_fahrenheit
+> (b) (2 Punkte) Definieren Sie die Funktionen\
+> – fahrenheit_to_kelvin\
+> – kelvin_to_fahrenheit\
 > Rufen Sie hierzu mehrere Funktionen aus dem vorherigen Aufgabenteil auf,
 > anstatt die mathematischen Formeln zur Konvertierung direkt zu verwenden
 
