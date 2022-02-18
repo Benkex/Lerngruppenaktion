@@ -70,7 +70,7 @@ def insert(tree: Optional[BinaryNode], id: int):
     return tree
 
 
-def create_tree(ids: list[int]) -> BinaryNode:
+def create_tree(ids: list[int]) -> Optional[BinaryNode]:
     tree = None
 
     for id in ids:
@@ -92,7 +92,14 @@ def find(tree: Optional[BinaryNode], id: int) -> bool:
 
 
 def select(tree: Optional[BinaryNode], lower: int, upper: int) -> list[int]:
-    pass
+    idList = []
+    if tree.left and lower < tree.id:
+        idList.extend(select(tree.left, lower, upper))
+    if lower <= tree.id <= upper:
+        idList.append(tree.id)
+    if tree.right and tree.id < upper:
+        idList.extend(select(tree.right, lower, upper))
+    return idList
 
 
 @dataclass
@@ -101,7 +108,8 @@ class Node:
     children: list["Node"]
     
     def __str__(self) -> str:
-        return f"Node({self.id}, {self.children})"
+        node_str = ", ".join(str(child) for child in self.children)
+        return f"Node({self.id}, [{node_str}])"
 
     def weight(self) -> int:
         w = self.id
@@ -119,8 +127,15 @@ def on_layer(tree: Node, depth: int) -> list[int]:
     for child in tree.children:
         out.extend(on_layer(child, depth - 1))
 
-    return out
+    return sorted(out)
 
 
-def leaves(tree):
-    pass
+def leaves(tree: Node) -> list[Node]:
+    if len(tree.children) == 0:
+        return [tree]
+    
+    lvs = []
+    for child in tree.children:
+        lvs.extend(leaves(child))
+
+    return sorted(lvs, key=lambda x: x.id)
