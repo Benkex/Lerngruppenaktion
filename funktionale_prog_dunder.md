@@ -29,9 +29,9 @@ Fachbegriffe:
 - Erstell die zweistellige lambda-Funktion `kreuz`, die zwei Listen nimmt, und die Kreuzprodukt von denen zurück gibt!\
 Beispiel: für `a = [1, 2, 3], b = ['x', 'y']` ist `kreuz(a, b) == [(1, 'x'), (1, 'y'), (2, 'x'), (2, 'y'), (3, 'x'), (3, 'y')]`
 
-
 ### A
-- Erstell die einstellige lambda-Funktion, die 
+- Erstell die zweistellige lambda-Funktion `nebenklasse`, die ein integer `v` und eine Liste von integers `U` nimmt,
+und eine Liste zurück gibt, in der du alle Elemente aus `U` zu `v` addierst!
 
 ### A
 - Erstell die einstellige _rekursive_ lambda Funktion `sum_up`, die die Zahlen zwischen 1 und n summiert!
