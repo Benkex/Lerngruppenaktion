@@ -1,3 +1,41 @@
+# Comprehensions
+## List-comprehension
+Es kommt häufig vor, dass wir einfach eine Liste, oder ein Dictionary mit der Hilfe einer schon existierende Sequence definieren wollen. Wir können auch so vorgehen:
+```
+new_list = []
+for element in sequence:
+    if bedingung:
+        new_list.append(change(element))
+        # entspricht new_list += [change(element)]
+```
+Aber das ist schon 4 Zeilen Code! Können wir diese Liste irgendwie nicht so definieren, wie die Mathematiker? z.B. `{x/2 | x ∈ [-5, 1000) und x^2 < 1000}`? Das wäre ja ziemlich elegant.
+Aber genau das machen Comprehensions. Ein direkter Vergleich mit list-comprehension und mathematischer Mengen: \
+`M = {x/2 |   x ∈ [-5, 1000)      und x^2 < 1000}`\
+`M = [x/2 for x in range(-5, 1000) if x**2 < 1000]`\
+Das ist doch schön, ne?:)\
+
+### A1
+Erstell die Folgende Listen mit List-comprehensions unter den Namen:
+- `3_mul`: `[3, 6, 9, 12, 15, 18, 21]`
+- `3_pot`: `[1, 3, 9, 27, 81, 243]`
+- `abc`: alle die Kleinbuchstaben in einer Liste (benutze `chr(nummer)` und die Ascii-tabelle!)
+- `ABC`: alle die Großbuchstaben
+- `3_mul_doppelt_ungerade`: das doppelte der ungeraden Elementen der Liste `3_mul`.
+
+### A2
+Erstell die Folgende "multidimensionale" Listen mit List-comprehensions unter den Namen:
+- `listen`: `[[], [], [], [], []]`
+- `armband`: `[[8], [8], [8], [8], [8]]`
+- `tictactoe`: `[['.', '.', '.'], ['.', '.', '.'], ['.', '.', '.']]`\
+Vorsicht, `['.', '.', '.']` sollst du auch mit einer List-comprehension machen!
+- `telephone`: `[[1, 2, 3], [4, 5, 6], [7, 8, 9]]` (die innere Listen auch mit List-comp.!)
+- 
+
+## Generatoren
+
+## Generator-comprehension
+
+
 # Dictionaries
 ## Was sind sie?
 > Wir kennen schon Listen und Tuples alle. Listen sind veränderlich, Tuples nicht.
@@ -11,10 +49,14 @@
 > Aber genau dafür sind Dictionaries da!\
 > Dictionary ist der nützlichste Datenstruktur, wenn wir Dinge miteinander verknüpfen / zueinander zuordnen wollen.\
 > Der obige Beispiel mit einem Dict: `ages_of_people = {'Coraline': 16, 'Uwe': 68, 'Fritz': 32}`\
-> Die Verbindung ist sofort sichtbar.
+> Die Verbindung ist sofort sichtbar.\
+> Wie du sehen kannst, es folgt folgendes Muster: `dict = {key: value, key: value, ...}`\
+> "key" und "value", weil das _key_ ist der _Schlüssel_, mit dem du zum _value_ zugreifen kannst, durch indexieren: `ages_of_people['Uwe']` entspricht `68`.
+> Du kannst auch alle keys und alle values eines Dictionary angucken: `ages_of_people.keys()` und `ages_of_people.values()` sind sogenannten View-Objekte (also _keine_ Listen, sondern eigentlich Generatoren), die mit dem Dictionary "synchronisiert" sind: wenn der Dictionary sich verändert, verändern sich diese View-Objekte auch.
+> Deshalb muss man sie erst zu ei
 
 ## A1
-Erstelle ein Dictionary mit 
+Erstelle ein Dictionary mit Sachen und gib 
 
 # Trie
 Dictionaries sind auch ideal für einfachere tree Strukturen, wie z.B. die sogenannte "trie" Struktur, womit man eine effizient suchbare Wörterbuch modellieren kann:
@@ -40,19 +82,4 @@ Wenn man es indexiert:
 Ihr könnt sehen:
 `words['A']['b']['o']` ist gerade `0: 0`, `words['A']['b']['i']`, `words['A']['b']['i']['t']['u']['r']` und `words['A']['p']['f']['e']['l']` auch.
 
-# Comprehensions
-## Einleitung
-Es kommt häufig vor, dass wir einfach eine Liste, oder ein Dictionary mit der Hilfe einer schon existierende Sequence definieren wollen. Wir können auch so vorgehen:
-```
-new_list = []
-for element in sequence:
-    if bedingung:
-        new_list.append(element)
-        # entspricht new_list += [element]
-```
-Aber das ist schon 4 Zeilen Code! Können wir diese Liste irgendwie nicht so definieren, wie die Mathematiker? z.B. `{x ∈ [-5, 1000) | x^2 < 1000}`? Das wäre ja ziemlich elegant.
-Aber genau das machen Comprehensions. Ein direkter Vergleich mit list-comprehension und mathematische Mengen: \
-`M = {x ∈ [-5, 1000)             |  x^2 < 1000}`\
-`M = [x for x in range(-5, 1000) if x**2 < 1000]`\
-Das ist doch schön, ne?:)\
 Dict-comprehension ist nur 
