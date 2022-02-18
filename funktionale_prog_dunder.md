@@ -31,7 +31,10 @@ Beispiel: für `a = [1, 2, 3], b = ['x', 'y']` ist `kreuz(a, b) == [(1, 'x'), (1
 
 ### A
 - Erstell die zweistellige lambda-Funktion `nebenklasse`, die ein integer `v` und eine Liste von integers `U` nimmt,
-und eine Liste zurück gibt, in der du alle Elemente aus `U` zu `v` addierst!
+und ein **set** zurück gibt, in der du alle Elemente aus `U` zu `v` addierst!\
+Ein set-comprehension macht man wie üblich, aber mit geschwungene Klammern: `{change(item) for item in seq if bedingung}`\
+Wir benutzen set, weil dann sich keine Elemente wiederholen werden. Eine Nebenklasse ist eine Menge, und in einer Menge darf sich kein Element wiederholen.\
+(Geholt aus LA Vorlesung)
 
 ### A
 - Erstell die einstellige _rekursive_ lambda Funktion `sum_up`, die die Zahlen zwischen 1 und n summiert!
