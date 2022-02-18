@@ -92,12 +92,16 @@ def find(tree: Optional[BinaryNode], id: int) -> bool:
 
 
 def select(tree: Optional[BinaryNode], lower: int, upper: int) -> list[int]:
+    if tree is None:
+        return []
+    
     idList = []
-    if tree.left and lower < tree.id:
+
+    if lower < tree.id:
         idList.extend(select(tree.left, lower, upper))
     if lower <= tree.id <= upper:
         idList.append(tree.id)
-    if tree.right and tree.id < upper:
+    if tree.id < upper:
         idList.extend(select(tree.right, lower, upper))
     return idList
 

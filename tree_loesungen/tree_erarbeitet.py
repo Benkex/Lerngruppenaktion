@@ -1,5 +1,6 @@
 from ast import Str
 from dataclasses import dataclass, field
+from turtle import st
 from typing import Any, Optional
 
 
@@ -109,8 +110,19 @@ def find(tree: Optional[BinaryNode], id: int) -> bool:
         return find(tree.left, id)
 
 
-def select(tree: Optional[BinaryNode], lower: int, upper: int):
-    pass
+def select(tree: Optional[BinaryNode], lower: int, upper: int) -> list[int]:
+    l = []
+
+    if tree is None:
+        return l
+    
+    l.extend(select(tree.left, lower, upper))
+    if lower <= tree.id and tree.id < upper:
+        l.append(tree.id)
+    
+    l.extend(select(tree.right, lower, upper))
+
+    return l
 
 
 @dataclass(order=True)
@@ -123,6 +135,9 @@ class Node:
         for child in self.children:
             s += str(child) + ", "
         return f"Node({self.id}, [{s[:-2]}])"
+    
+    def __repr__(self) -> str:
+        return str(self)
 
     def weight(self) -> int:
         w = self.id
@@ -195,6 +210,10 @@ if __name__ == "__main__":
     print(f"{find(tree, 11)=}")
 
     print(f"{find(tree, 42)=}")
+
+    tree = create_tree([8, 3, 25, 1, 5, 7, 100, 11])
+    print(f"{select(tree, 5, 11)=}")
+    print(f"{select(tree, 200, 300)=}")
 
     tree = Node(4, [Node(5, []), Node(6, [Node(2, [])]), Node(3, [])])
     print("tree = " + str(tree))
