@@ -29,7 +29,7 @@ Enter source value: 42.0
 Enter target unit [C / F / K]: K
 42.0 C corresponds to 315.15 K
 ```
->>> Gehen Sie dabei wie folgt vor:
+> Gehen Sie dabei wie folgt vor:
 (a) Definieren Sie die folgenden Funktionen:
 – celsius_to_fahrenheit
 – fahrenheit_to_celsius
