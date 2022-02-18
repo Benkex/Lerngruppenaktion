@@ -17,8 +17,9 @@
 Erstelle ein Dictionary mit 
 
 # Trie
-Dictionaries sind auch ideal für einfachere tree Strukturen, wie z.B. die sogenannte "trie" Struktur, womit man eine effizient suchbare Wörterbuch modellieren kann:\
-```words = {'A': {'b': {'o': {0: 0},
+Dictionaries sind auch ideal für einfachere tree Strukturen, wie z.B. die sogenannte "trie" Struktur, womit man eine effizient suchbare Wörterbuch modellieren kann:
+```
+words = {'A': {'b': {'o': {0: 0},
                       'i': {0: 0,
                             't': {'u': {'r': {0: 0}}}
                            }
