@@ -26,11 +26,11 @@ Also, das Muster für ein List-comprehension ist folgendes: `list_comp = [change
 
 ### A1
 Erstell die Folgende Listen mit List-comprehensions unter den Namen:
-- `3_mul`: `[3, 6, 9, 12, 15, 18, 21]`
-- `3_pot`: `[1, 3, 9, 27, 81, 243]`
+- `mul_3`: `[3, 6, 9, 12, 15, 18, 21]`
+- `pot_3`: `[1, 3, 9, 27, 81, 243]`
 - `abc`: alle die Kleinbuchstaben in einer Liste (benutze `chr(nummer)` und die Ascii-tabelle!)
 - `ABC`: alle die Großbuchstaben
-- `3_mul_doppelt_ungerade`: das doppelte der ungeraden Elementen der Liste `3_mul`.
+- `mul_3_doppelt_ungerade`: das doppelte der ungeraden Elementen der Liste `3_mul`.
 
 ### A2
 Erstell die Folgende "multidimensionale" Listen mit List-comprehensions unter den Namen:
