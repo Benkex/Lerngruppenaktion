@@ -49,10 +49,10 @@ Beispielaufruf:
 > Rufen Sie hierzu mehrere Funktionen aus dem vorherigen Aufgabenteil auf,
 > anstatt die mathematischen Formeln zur Konvertierung direkt zu verwenden
 
-Speichere die erstellte converter-Funktionen (celsius_to_fahrenheit, celsius_to_kelvin, ...) in einem Dictionary `convert`!
-Seien dabei die keys von `convert` die drei Maßeinheiten, die values wieder 3 Dictionaries,
-je mit 2 items, die als key die andere zwei Maßeinheiten haben, und als value die entsprechende converter-Funktion!
-Beispiel: `convert['C']['K'] == celsius_to_kelvin`
+Speichere die erstellte converter-Funktionen (celsius_to_fahrenheit, celsius_to_kelvin, ...) in einem Dictionary `convert`!\
+Seien dabei die keys von `convert` die drei Maßeinheiten, die values wieder 3 Dictionaries,\
+je mit 2 items, die als key die andere zwei Maßeinheiten haben, und als value die entsprechende converter-Funktion!\
+Beispiel: `convert['C']['K'] == celsius_to_kelvin`\
 Mit `convert` kannst du jetzt die Aufgabenteil (c) sehr einfach und elegant lösen, vor allem OHNE if-Verzweigungen!
 > (c) Verwenden Sie die Funktionen aus den vorherigen Aufgabenteilen zusammen mit input, print ~~und if-Verzweigungen~~,
 > um das gewünschte Verhalten zu erzeugen (wie im Einleitungstext der Aufgabe beschrieben).
