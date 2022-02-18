@@ -44,7 +44,7 @@ Und diese Ausdruck: `(wert_wenn_true if bedingung else wert_wenn_false)` zum Sto
 
 ### A
 (EidP Aufgabe 3.2)
-https://proglang.informatik.uni-freiburg.de/teaching/info1/2021/exercise/sheet03.pdf
+https://proglang.informatik.uni-freiburg.de/teaching/info1/2021/exercise/sheet03.pdf \
 Speichere die erstellte converter-Funktionen (celsius_to_fahrenheit, celsius_to_kelvin, ...) in einem Dictionary `convert`!\
 Seien dabei die keys von `convert` die drei Maßeinheiten, die values wieder 3 Dictionaries,\
 je mit 2 items, die als key die andere zwei Maßeinheiten haben, und als value die entsprechende converter-Funktion!\
