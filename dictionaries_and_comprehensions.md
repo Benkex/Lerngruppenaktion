@@ -80,7 +80,7 @@ Erstell eine Generator-funktion mit einem Argument `n`, die die rekursive `fakul
 ## Generator-comprehension
 Eine Kombination aus comprehensions und Generatoren. _Die Schreibweise_ unterschiedet sich nur an den Klammern: **bei Generator-comprehensions benutzen wir runde Klammern** (also es gibt nichts wie Tuple-comprehensions)
 Muster: `gen_comp = (change(element) for element in sequence if bedingung)`
-> Natürlich sind hier auch mehrere for-Schleifen erlaubt
+> Natürlich sind hier auch mehrere for-Schleifen erlaubt.\
 Verwendung von Generator-comprehensions ist das selbe, wie beim Generatoren:
 ```
 g = (2**n for n in [4, 5, 6] if n%2==0)
@@ -95,27 +95,62 @@ for round in (2**n for n in [4, 5, 6] if n%2==0):
     print(round)
 ```
 
+### A6
+- Erstelle einen Generator-comprehension, was jedes mal die zweifache eines inputs zurück gibt!
+- Erstelle einen Generator-comprehension, was dir die Zeilen vom List `telephone` (Aus A2) zurück gibt!
+
 # Dictionaries
 ## Was sind sie?
-> Wir kennen schon Listen und Tuples alle. Listen sind veränderlich, Tuples nicht.
-> Listen und Tuples enthalten einfach mehrere einzelne Elemente.
-> Es kommt aber häufig vor, dass bestimmte Daten eine Beziehung zu anderen Daten haben.\
-> Wir haben z.B. eine Liste von Namen: `names = ['Coraline', 'Uwe', 'Fritz']`\
-> und eine Liste, was den Alter dieser Personen enthält: `ages = [16, 68, 32]`\
-> Das ist aber doch nicht wirklich nützlich. Wir wissen zwar, dass Coraline die erste Element in der Liste `names` ist,
-> deshalb gehört zu ihr das erste Element in der Liste `ages`, so hat Coraline der Alter von 16.
-> Wir haben aber keine direkte Verbindung zwischen Coraline und 16, und es ist auch nicht anschaulich.\
-> Aber genau dafür sind Dictionaries da!\
-> Dictionary ist der nützlichste Datenstruktur, wenn wir Dinge miteinander verknüpfen / zueinander zuordnen wollen.\
-> Der obige Beispiel mit einem Dict: `ages_of_people = {'Coraline': 16, 'Uwe': 68, 'Fritz': 32}`\
-> Die Verbindung ist sofort sichtbar.\
-> Wie du sehen kannst, es folgt folgendes Muster: `dict = {key: value, key: value, ...}`\
-> "key" und "value", weil das _key_ ist der _Schlüssel_, mit dem du zum _value_ zugreifen kannst, durch indexieren: `ages_of_people['Uwe']` entspricht `68`.
-> Du kannst auch alle keys und alle values eines Dictionary angucken: `ages_of_people.keys()` und `ages_of_people.values()` sind sogenannten View-Objekte (also _keine_ Listen, sondern eigentlich Generatoren), die mit dem Dictionary "synchronisiert" sind: wenn der Dictionary sich verändert, verändern sich diese View-Objekte auch.
-> Deshalb muss man sie erst zu ei
+Wir kennen schon Listen und Tuples alle. Listen sind veränderlich, Tuples nicht.
+Listen und Tuples enthalten einfach mehrere einzelne Elemente.
+Es kommt aber häufig vor, dass bestimmte Daten eine Beziehung zu anderen Daten haben.\
+Wir haben z.B. eine Liste von Namen: `names = ['Coraline', 'Uwe', 'Fritz']`\
+und eine Liste, was den Alter dieser Personen enthält: `ages = [16, 68, 32]`\
+Das ist aber doch nicht wirklich nützlich. Wir wissen zwar, dass Coraline die erste Element in der Liste `names` ist,
+deshalb gehört zu ihr das erste Element in der Liste `ages`, so hat Coraline der Alter von 16.
+Wir haben aber keine direkte Verbindung zwischen Coraline und 16, und es ist auch nicht anschaulich.\
+Aber genau dafür sind Dictionaries da!\
+Dictionary ist der nützlichste Datenstruktur, wenn wir Dinge miteinander verknüpfen / zueinander zuordnen wollen.\
+Der obige Beispiel mit einem Dict: `ages_of_people = {'Coraline': 16, 'Uwe': 68, 'Fritz': 32}`\
+Die Verbindung ist sofort sichtbar.\
+Wie du sehen kannst, es folgt folgendes Muster: `dict = {key: value, key: value, ...}`\
+"key" und "value", weil das _key_ ist der _Schlüssel_, mit dem du zum _value_ zugreifen kannst, durch indexieren: `ages_of_people['Uwe']` entspricht `68`.
+Du kannst auch alle keys und alle values eines Dictionary angucken: `ages_of_people.keys()` und `ages_of_people.values()` sind sogenannten View-Objekte (also _keine_ Listen, sondern eigentlich Generatoren), die mit dem Dictionary "synchronisiert" sind: wenn der Dictionary sich verändert, verändern sich diese View-Objekte auch.\
+Deshalb muss man sie erst zu einer Liste convertieren (`list(ages_of_people.keys())` und `list(ages_of_people.values())`), wenn man sie als eine Liste benutzen möchte.\
+Ansonst kann man durch diese Views ruhig durchiterieren:
+```
+for key in ages_of_people.keys():
+    print(key)
 
-## A1
-Erstelle ein Dictionary mit Sachen und gib 
+# Anmerkung: man kann hier einfach "for key in ages_of_people" schreiben, in dieser Situation entspricht "ages_of_people" die keys von ages_of_people.
+# Genauso mit dem convertieren: list(ages_of_people) == list(ages_of_people.keys())
+for key in ages_of_people:
+    print(key)
+ 
+for value in ages_of_people.values():
+    print(value)
+```
+Wenn man die keys und values beide erhalten möchte, schreibt man `ages_of_people.items()`. Dies ist eine **Liste** von Tuples: `[(key, value), (key, value), ...]`
+Man kann das auch sehr schön durchiterieren:
+```
+for item in ages_of_people.items():
+    print(item)
+    print(item[0], item[1])
+    
+# da item hier ein tuple ist, können wir tuple-unpacking machen:
+for (key, value) in ages_of_people.items(): # die Klammern um (key, value) kann man weglassen, aber erst mal ist es empfehlenswert, immer die Klammer hinzuschreiben
+    print(key, value)
+```
+
+## A7
+- Erstelle ein Dictionary `farbe` mit Sachen als keys (was du möchtest) und die Farben der Sachen als values. Es sollen dabei mehrere Sachen mit der gleichen Farbe geben!
+- Print alle keys von `farbe`!
+- Print alle values von `farbe`!
+- Print alle key-value Paare von `farbe`!
+
+## A8
+
+# Dict-comprehension
 
 # Trie
 Dictionaries sind auch ideal für einfachere tree Strukturen, wie z.B. die sogenannte "trie" Struktur, womit man eine effizient suchbare Wörterbuch modellieren kann:
@@ -140,5 +175,3 @@ Wenn man es indexiert:
 
 Ihr könnt sehen:
 `words['A']['b']['o']` ist gerade `0: 0`, `words['A']['b']['i']`, `words['A']['b']['i']['t']['u']['r']` und `words['A']['p']['f']['e']['l']` auch.
-
-Dict-comprehension ist nur 
