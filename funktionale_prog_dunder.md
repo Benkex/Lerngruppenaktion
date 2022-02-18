@@ -26,7 +26,7 @@ Fachbegriffe:
 - Erstell die einstellige lambda-Funktion `teiler`, die alle Teiler von `n` zurück gibt!
 - Erstell die zweistellige lambda-Funktion `gem_teiler`, die die gemeinsame Teiler von `a` und `b` in einer Liste zurück gibt!
 - Erstell die zweistellige lambda-Funktion `tuplize`, die `(a, b)` zurück gibt!
-- Erstell die zweistellige lambda-Funktion `kreuz`, die zwei Listen nimmt, und die Kreuzprodukt von denen zurück gibt!
+- Erstell die zweistellige lambda-Funktion `kreuz`, die zwei Listen nimmt, und die Kreuzprodukt von denen zurück gibt!\
 Beispiel: für `a = [1, 2, 3], b = ['x', 'y']` ist `kreuz(a, b) == [(1, 'x'), (1, 'y'), (2, 'x'), (2, 'y'), (3, 'x'), (3, 'y')]`
 
 
