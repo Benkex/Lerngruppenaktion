@@ -19,10 +19,7 @@ for x in range(-5, 1000): # range ist exklusiv
 ```
 Das können wir jetzt als eine List-comprehension schreiben:\
 `M = [x/2 for x in range(-5, 1000) if x**2 < 1000]`\
-Das ist doch schön, ne?:)\
-Ein direkter Vergleich mit list-comprehension und mathematischer Mengen: \
-`M = {x/2 |   x ∈ [-5, 1000)      und x^2 < 1000}`\
-`M = [x/2 for x in range(-5, 1000) if x**2 < 1000]`\
+Das ist doch schön, ne?:) Sieht sehr ähnlich zur mathematischen Definition aus.\
 Also, das Muster für ein List-comprehension ist folgendes: `list_comp = [change(element) for element in sequence if bedingung]`\
 > Man kann auch mehrere for-Schleifen benutzen: `list_comp = [change(e1, e2, ...) for e1 in seq1 if bed1 for e2 in seq2 if bed2 ...]`\
 > Dabei ist die **Reihenfolge** der Schleifen **wichtig**!
@@ -42,9 +39,43 @@ Erstell die Folgende "multidimensionale" Listen mit List-comprehensions unter de
 - `tictactoe`: `[['.', '.', '.'], ['.', '.', '.'], ['.', '.', '.']]`\
 Vorsicht, `['.', '.', '.']` sollst du auch mit einer List-comprehension machen!
 - `telephone`: `[[1, 2, 3], [4, 5, 6], [7, 8, 9]]` (die innere Listen auch mit List-comp.!)
-- 
+
+### A3
+- Mache eine eindimensionale Liste aus der Liste `telephone`: `[1, 2, 3, 4, 5, 6, 7, 8, 9]`!
+- Mache eine eindimensionale Liste aus der Liste `telephone`, mit umgedrehten Zeilen-reihenfolge: `[7, 8, 9, 4, 5, 6, 1, 2, 3]`!
+- Mache eine eindimensionale Liste aus der Liste `telephone`, mit umgedrehten Spalten-reihenfolge: `[3, 2, 1, 6, 5, 4, 9, 8, 7]`!
 
 ## Generatoren
+Du kennst schon Funktionen und return. Wenn du statt return, `yield` scheibst, BAMM, you've got a generator (auch Iterator genannt)!\
+Der Unterschied: Wenn du eine Funktion aufrufst, sie arbeitet bis sie zum return ankommt, dann gibt sie das zurück, was nach dem return steht, und das war's. Wenn du sie _nochmal_ aufrufst, fängt sie wieder **am Anfang** an.\
+Ein Generator macht _erst mal_ quasi das selbe: er arbeitet bis er zum `yield` ankommt, dann gibt er das zurück, was danach steht. Aber wenn du ihn nochmal aufrufst, fängt er da an, wo er letztens aufgehört hat: nach dem `yield`, und geht weiter.
+Man bekommt die yield-Werte auch ein bisschen anders: man muss next() auf dem Generator aufrufen, um das nächste Element zu erhalten. Oder eben mit einer for-Schleife durchiterieren.
+```
+def gen(n: int):
+    yield "Round 1"
+    # stop, und dann von hier geht's weiter
+    yield "Round 2"
+    # ende
+    print("Ende. Du hast mir eine Zahl gegeben, ich gebe es zurück, hier:", n)
+    
+g = gen(6)
+print(next(g))
+print(next(g))
+try:
+    print(next(g))
+except Exception as e:
+    print(e)
+
+for round in gen(6):
+    print(round)
+```
+
+### A4
+- Erstell eine Generator-funktion mit einem Argument `n`, die mit jedem yield die n-fache der Zahlen von 1 bis 20 zurückgibt! (also wenn n=3, dann 3, 6, 9, ...)
+- Erstell eine Generator-funktion mit einem Argument `n`, die mit jedem yield die n-te Potenz der Zahlen 1-20 zurückgibt! (n=3 => 1, 8, 27, 64, ...)
+
+### A5
+Erstell eine Generator-funktion mit einem Argument `n`, die die rekursive `fakul` Funktion aus dem ersten Blatt benutzt, um alle Fakultäten von 1 bis n zu yielden! (also sie soll 1!, 2!, 3!, ... yielden)
 
 ## Generator-comprehension
 
