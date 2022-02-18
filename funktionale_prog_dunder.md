@@ -11,10 +11,33 @@ def func(arg1, arg2, ..., argN):
 ...kann jetzt einfacher als ein selbstständiger Objekt geschrieben werden: \
 `func = lambda arg1, arg2, ..., argN: statement(arg1, arg2, ..., argN)`
 
-### A1
-- Erstell eine einstellige lambda-Funktion (d.h. sie soll ein Argument haben, `n` z.B.), die n^2 zurück gibt!
-- Erstell eine einstellige lambda-Funktion mit Argument `n`, die 
+Fachbegriffe:
+- einstellige Funktion: Funktion mit einem Argument (meistens `n`)
+- zweistellige Funktion: Funktion mit zwei Argumenten (meistens `x` und `y`; oder `a` und `b`)
+- ...
 
+### A1
+- Erstell die einstellige lambda-Funktion `hoch2`, die `n^2` zurück gibt!
+- Erstell die zweistellige lambda-Funktion `potenz`, die `x^y` zurück gibt!
+- Erstell die zweistellige lambda-Funktion `add_operation`, die `a + b` zurück gibt!
+
+### A
+- Erstell die einstellige lambda-Funktion `mittelwert`, die eine Liste von integers nimmt (darfst du voraussetzen), und den Mittelwert von denen zurück gibt! Welche eingebaute Funktion ist uns dabei besonders nützlich?
+- Erstell die einstellige lambda-Funktion `teiler`, die alle Teiler von `n` zurück gibt!
+- Erstell die zweistellige lambda-Funktion `gem_teiler`, die die gemeinsame Teiler von `a` und `b` in einer Liste zurück gibt!
+- Erstell die zweistellige lambda-Funktion `tuplize`, die `(a, b)` zurück gibt!
+- Erstell die zweistellige lambda-Funktion `kreuz`, die zwei Listen nimmt, und die Kreuzprodukt von denen zurück gibt!
+Beispiel: für `a = [1, 2, 3], b = ['x', 'y']` ist `kreuz(a, b) == [(1, 'x'), (1, 'y'), (2, 'x'), (2, 'y'), (3, 'x'), (3, 'y')]`
+
+
+### A
+- Erstell die einstellige lambda-Funktion, die 
+
+### A
+- Erstell die einstellige _rekursive_ lambda Funktion `sum_up`, die die Zahlen zwischen 1 und n summiert!
+Du darfst dabei schon die name der Funktion verwenden: `sum_um = lambda ...: ... sum_up(...) ...`
+Und diese Ausdruck: `(wert_wenn_true if bedingung else wert_wenn_false)` zum Stoppen.
+- Erstell die einstellige _rekursive_ lambda-Funktion `fakultaet`, die die Fakultät von `n` zurück gibt!
 
 ### A
 (EidP Aufgabe 3.2)
