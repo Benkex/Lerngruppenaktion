@@ -44,37 +44,7 @@ Und diese Ausdruck: `(wert_wenn_true if bedingung else wert_wenn_false)` zum Sto
 
 ### A
 (EidP Aufgabe 3.2)
-> In dieser Aufgabe sollen Sie ein Programm schreiben, welches eine Temperatur in
-> Celsius (C), Fahrenheit (F) oder Kelvin (K) entgegen nimmt und diese zu einer anderen Temperatureinheit konvertiert und ausgibt.
-> Ruft man das Programm auf, um 42 Grad Celsius nach Kelvin zu konvertieren,
-> soll dabei exakt die folgende Ein- und Ausgabe erscheinen (Benutzereingaben in blau hervorgehoben):
-```
-$ python3 temperature.py
-Enter source unit [C / F / K]: C
-Enter source value: 42.0
-Enter target unit [C / F / K]: K
-42.0 C corresponds to 315.15 K
-```
-> Gehen Sie dabei wie folgt vor:\
-(a) Definieren Sie die folgenden Funktionen:\
-– celsius_to_fahrenheit\
-– fahrenheit_to_celsius\
-– celsius_to_kelvin\
-– kelvin_to_celsius\
-Die Funktionen sollen die Temperatur als Argument vom Typ float entgegen nehmen und die entsprechend konvertierte Temperatur als Wert vom Typ
-float zurückgeben.
-Wie in der vorherigen Aufgabe, sollen diese Funktionen keine Side-Effects haben.
-Beispielaufruf:
-```
->>> celsius_to_fahrenheit(42.0)
-107.6
-```
-> (b) Definieren Sie die Funktionen\
-> – fahrenheit_to_kelvin\
-> – kelvin_to_fahrenheit\
-> Rufen Sie hierzu mehrere Funktionen aus dem vorherigen Aufgabenteil auf,
-> anstatt die mathematischen Formeln zur Konvertierung direkt zu verwenden
-
+https://proglang.informatik.uni-freiburg.de/teaching/info1/2021/exercise/sheet03.pdf
 Speichere die erstellte converter-Funktionen (celsius_to_fahrenheit, celsius_to_kelvin, ...) in einem Dictionary `convert`!\
 Seien dabei die keys von `convert` die drei Maßeinheiten, die values wieder 3 Dictionaries,\
 je mit 2 items, die als key die andere zwei Maßeinheiten haben, und als value die entsprechende converter-Funktion!\
