@@ -54,5 +54,5 @@ Seien dabei die keys von `convert` die drei Maßeinheiten, die values wieder 3 D
 je mit 2 items, die als key die andere zwei Maßeinheiten haben, und als value die entsprechende converter-Funktion!\
 Beispiel: `convert['C']['K'] == celsius_to_kelvin`\
 Mit `convert` kannst du jetzt die Aufgabenteil (c) sehr einfach und elegant lösen, vor allem OHNE if-Verzweigungen!
-> (c) Verwenden Sie die Funktionen aus den vorherigen Aufgabenteilen zusammen mit input, print ~~und if-Verzweigungen~~,
+> (c) Verwenden Sie ~~die Funktionen aus den vorherigen Aufgabenteilen~~~ die Funktion `convert` zusammen mit input und print ~~und if-Verzweigungen~~,
 > um das gewünschte Verhalten zu erzeugen (wie im Einleitungstext der Aufgabe beschrieben).
