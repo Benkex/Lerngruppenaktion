@@ -18,14 +18,15 @@ Erstelle ein Dictionary mit
 
 # Trie
 Dictionaries sind auch ideal für einfachere tree Strukturen, wie z.B. die sogenannte "trie" Struktur, womit man eine effizient suchbare Wörterbuch modellieren kann:\
-`words = {'A': {'b': {'o': {0: 0},\
-                      'i': {0: 0,\
-                            't': {'u': {'r': {0: 0}}}\
-                           }\
-                     },\
-                'p': {'f': {'e': {'l': {0: 0}}}}\
-               }\
-         }`\
+```words = {'A': {'b': {'o': {0: 0},
+                      'i': {0: 0,
+                            't': {'u': {'r': {0: 0}}}
+                           }
+                     },
+                'p': {'f': {'e': {'l': {0: 0}}}}
+               }
+         }
+```
 Dies ist verschachtelt: Dictionaries in dictionaries. Die `0: 0` Werte stehen für das Ende eines Wortes. Wie du sehen kannst, `Abi` und `Abitur` sind beide Wörter, beginnen aber mit den gleichen Buchstaben. Deshalb packen wir ein `0: 0` in den Dictionary von `i` rein, um anzuzeigen, dass dies das Ende eines sinnvollen Wortes ist.\
 Wenn man es indexiert:
 - `words['A']` bedeutet folgenden Dict:\
