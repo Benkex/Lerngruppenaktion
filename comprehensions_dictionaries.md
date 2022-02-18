@@ -41,9 +41,10 @@ Vorsicht, `['.', '.', '.']` sollst du auch mit einer List-comprehension machen!
 - `telephone`: `[[1, 2, 3], [4, 5, 6], [7, 8, 9]]` (die innere Listen auch mit List-comp.!)
 
 ### A3
-- Mache eine eindimensionale Liste aus der Liste `telephone`: `[1, 2, 3, 4, 5, 6, 7, 8, 9]`!
-- Mache eine eindimensionale Liste aus der Liste `telephone`, mit umgedrehten Zeilen-reihenfolge: `[7, 8, 9, 4, 5, 6, 1, 2, 3]`!
-- Mache eine eindimensionale Liste aus der Liste `telephone`, mit umgedrehten Spalten-reihenfolge: `[3, 2, 1, 6, 5, 4, 9, 8, 7]`!
+
+- Mache eine eindimensionale Liste aus der Liste `telephone`! (Ergebnis soll: `[1, 2, 3, 4, 5, 6, 7, 8, 9]`) ich
+- Mache eine eindimensionale Liste aus der Liste `telephone`, mit umgedrehten Zeilen-reihenfolge! (Ergebnis soll: `[7, 8, 9, 4, 5, 6, 1, 2, 3]`)
+- Mache eine eindimensionale Liste aus der Liste `telephone`, mit umgedrehten Spalten-reihenfolge! (Ergebnis soll: `[3, 2, 1, 6, 5, 4, 9, 8, 7]`)
 
 ## Generatoren
 Du kennst schon Funktionen und return. Wenn du statt return, `yield` scheibst, BAMM, you've got a generator (auch Iterator genannt)!\
