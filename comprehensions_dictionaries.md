@@ -97,7 +97,7 @@ for round in (2**n for n in [4, 5, 6] if n%2==0):
 ```
 
 ### A6
-- Erstelle einen Generator-comprehension, was jedes mal die zweifache eines inputs zurück gibt!
+- Erstelle die entsprechende Generator-comprehensions für die Generatoren in A4 und A5!
 - Erstelle einen Generator-comprehension, was dir die Zeilen vom List `telephone` (Aus A2) zurück gibt!
 
 # Dictionaries
