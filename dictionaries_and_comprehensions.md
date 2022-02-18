@@ -20,7 +20,7 @@ for x in range(-5, 1000): # range ist exklusiv
 Das können wir jetzt als eine List-comprehension schreiben:\
 `M = [x/2 for x in range(-5, 1000) if x**2 < 1000]`\
 Das ist doch schön, ne?:) Sieht sehr ähnlich zur mathematischen Definition aus.\
-Also, das Muster für ein List-comprehension ist folgendes: `list_comp = [change(element) for element in sequence if bedingung]`\
+Also, das Muster für ein List-comprehension ist folgendes: `list_comp = [change(element) for element in sequence if bedingung]`
 > Man kann auch mehrere for-Schleifen benutzen: `list_comp = [change(e1, e2, ...) for e1 in seq1 if bed1 for e2 in seq2 if bed2 ...]`\
 > Dabei ist die **Reihenfolge** der Schleifen **wichtig**!
 
@@ -63,8 +63,8 @@ print(next(g))
 print(next(g))
 try:
     print(next(g))
-except Exception as e:
-    print(e)
+except StopIteration:
+    print("Ende!")
 
 for round in gen(6):
     print(round)
@@ -78,7 +78,22 @@ for round in gen(6):
 Erstell eine Generator-funktion mit einem Argument `n`, die die rekursive `fakul` Funktion aus dem ersten Blatt benutzt, um alle Fakultäten von 1 bis n zu yielden! (also sie soll 1!, 2!, 3!, ... yielden)
 
 ## Generator-comprehension
+Eine Kombination aus comprehensions und Generatoren. _Die Schreibweise_ unterschiedet sich nur an den Klammern: **bei Generator-comprehensions benutzen wir runde Klammern** (also es gibt nichts wie Tuple-comprehensions)
+Muster: `gen_comp = (change(element) for element in sequence if bedingung)`
+> Natürlich sind hier auch mehrere for-Schleifen erlaubt
+Verwendung von Generator-comprehensions ist das selbe, wie beim Generatoren:
+```
+g = (2**n for n in [4, 5, 6] if n%2==0)
+print(next(g))
+print(next(g))
+try:
+    print(next(g))
+except StopIteration:
+    print("Ende!")
 
+for round in (2**n for n in [4, 5, 6] if n%2==0):
+    print(round)
+```
 
 # Dictionaries
 ## Was sind sie?
