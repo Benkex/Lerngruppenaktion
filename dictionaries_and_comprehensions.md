@@ -42,15 +42,17 @@ Ihr könnt sehen:
 
 # Comprehensions
 ## Einleitung
-> Es kommt häufig vor, dass wir einfach eine Liste, oder ein Dictionary mit der Hilfe einer schon existierende Sequence definieren wollen. Wir können auch so vorgehen:
-> `new_list = []
-> for element in sequence:
->     if bedingung:
->         new_list.append(element)
->         # entspricht new_list += [element]`
-> Aber das ist schon 4 Zeilen Code! Können wir diese Liste irgendwie nicht so definieren, wie die Mathematiker? z.B. `{x ∈ [-5, 1000) | x^2 < 1000}`? Das wäre ja ziemlich elegant.
-> Aber genau das machen Comprehensions. Ein direkter Vergleich mit list-comprehension und mathematische Mengen: \
+Es kommt häufig vor, dass wir einfach eine Liste, oder ein Dictionary mit der Hilfe einer schon existierende Sequence definieren wollen. Wir können auch so vorgehen:
+```
+new_list = []
+for element in sequence:
+    if bedingung:
+        new_list.append(element)
+        # entspricht new_list += [element]
+```
+Aber das ist schon 4 Zeilen Code! Können wir diese Liste irgendwie nicht so definieren, wie die Mathematiker? z.B. `{x ∈ [-5, 1000) | x^2 < 1000}`? Das wäre ja ziemlich elegant.
+Aber genau das machen Comprehensions. Ein direkter Vergleich mit list-comprehension und mathematische Mengen: \
 `M = {x ∈ [-5, 1000)             |  x^2 < 1000}`\
 `M = [x for x in range(-5, 1000) if x**2 < 1000]`\
-> Das ist doch schön, ne?:)\
-> Dict-comprehension ist nur 
+Das ist doch schön, ne?:)\
+Dict-comprehension ist nur 
