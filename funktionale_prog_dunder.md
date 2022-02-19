@@ -24,16 +24,16 @@ Fachbegriffe:
 ### A2
 - Erstell die einstellige lambda-Funktion `mittelwert`, die eine Liste von integers nimmt (darfst du voraussetzen), und den Mittelwert von denen zurück gibt! Welche eingebaute Funktion ist uns dabei besonders nützlich?
 - Erstell die einstellige lambda-Funktion `teiler`, die alle positive Teiler von `n` in einer Liste zurück gibt!\
-Bsp:- `teiler(36) = [1, 2, 3, 6, 9, 12, 18, 36]`,
+    - `teiler(36) = [1, 2, 3, 6, 9, 12, 18, 36]`,
     - `teiler(0) = []`
     - `teiler(-3) = [1, 3]`
 - Erstell die zweistellige lambda-Funktion `gem_teiler`, die die gemeinsame positive Teiler von `x` und `y` in einer Liste zurück gibt!\
-Bsp:- `gem_teiler(12, 81) == [1, 3]`
+    - `gem_teiler(12, 81) == [1, 3]`
     - `gem_teiler(12, 23) == [1]`
     - `gem_teiler(-5, 15) == [1, 5]`
 - Erstell die zweistellige lambda-Funktion `tuplize`, die `(x, y)` zurück gibt!
 - Erstell die zweistellige lambda-Funktion `kreuz`, die zwei Listen nimmt, und die Kreuzprodukt von denen zurück gibt!\
-Beispiel: für `num = [1, 2, 3], let = ['x', 'y']` ist `kreuz(num, let) == [(1, 'x'), (1, 'y'), (2, 'x'), (2, 'y'), (3, 'x'), (3, 'y')]`
+    - Für `num = [1, 2, 3], let = ['x', 'y']` ist `kreuz(num, let) == [(1, 'x'), (1, 'y'), (2, 'x'), (2, 'y'), (3, 'x'), (3, 'y')]`
 
 ### A2
 - Erstell die zweistellige lambda-Funktion `nebenklasse`, die ein integer `v` und ein Sequence von integers `U` nimmt,
@@ -41,18 +41,18 @@ und ein **set** zurück gibt, in der du alle Elemente aus `U` zu `v` addierst! V
 Ein set-comprehension macht man wie üblich, aber mit geschwungene Klammern: `{change(item) for item in seq if bedingung}`\
 Wir benutzen set, weil dann sich keine Elemente wiederholen werden. Eine Nebenklasse ist eine Menge, und in einer Menge darf sich kein Element wiederholen.\
 (Geholt aus LA Vorlesung)\
-Beispiel: `nebenklasse(3, [-8, 1, 5, -2, 0]) = {-5, 4, 8, 1, 3}`
+    - `nebenklasse(3, [-8, 1, 5, -2, 0]) = {-5, 4, 8, 1, 3}`
 
 ### A4
 - Erstell die einstellige _rekursive_ lambda Funktion `sum_up`, die die Zahlen zwischen 1 und n summiert!
 Du darfst dabei schon die name der Funktion verwenden: `sum_um = lambda ...: ... sum_up(...) ...`
 Und diese Ausdruck: `(wert_wenn_true if bedingung else wert_wenn_false)` zum Stoppen.\
-Bsp: `sum_up(100) == 5050`
+    - `sum_up(100) == 5050`
 - Erstell die einstellige _rekursive_ lambda-Funktion `fakultaet`, die die Fakultät von `n` zurück gibt!\
-- Erstell die einstellige _rekursive_ lambda-Funktion `fibo` zur Erstellung von Fibonacci-Reihen bis `n`!\
-Fibonacci-Reihe für n=2: `[0, 1]`\
-Fibonacci-Reihe für n=5: `[0, 1, 1, 2, 3]`\
-Fibonacci-Reihe für n=6: `[0, 1, 1, 2, 3, 5]`
+- Erstell die einstellige _rekursive_ lambda-Funktion `fibo` zur Erstellung von Fibonacci-Reihen bis `n`!
+    - Fibonacci-Reihe für n=2: `[0, 1]`
+    - Fibonacci-Reihe für n=5: `[0, 1, 1, 2, 3]`
+    - Fibonacci-Reihe für n=6: `[0, 1, 1, 2, 3, 5]`
 
 ### A5
 (EidP Aufgabe 3.2)
