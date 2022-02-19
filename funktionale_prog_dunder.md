@@ -24,7 +24,7 @@ Fachbegriffe:
 ### A2
 - Erstell die einstellige lambda-Funktion `mittelwert`, die eine Liste von integers nimmt (darfst du voraussetzen), und den Mittelwert von denen zurück gibt! Welche eingebaute Funktion ist uns dabei besonders nützlich?
 - Erstell die einstellige lambda-Funktion `teiler`, die alle positive Teiler von `n` in einer Liste zurück gibt!
-    - `teiler(36) = [1, 2, 3, 6, 9, 12, 18, 36]`,
+    - `teiler(36) = [1, 2, 3, 4, 6, 9, 12, 18, 36]`,
     - `teiler(0) = []`
     - `teiler(-3) = [1, 3]`
 - Erstell die zweistellige lambda-Funktion `gem_teiler`, die die gemeinsame positive Teiler von `x` und `y` in einer Liste zurück gibt!
