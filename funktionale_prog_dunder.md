@@ -69,7 +69,7 @@ Mit `convert` kannst du jetzt die Aufgabenteil (c) sehr einfach und elegant lös
 # Dunder Methoden
 Klassen, die man selbst erstellt, können beliebig viele Eigenschaften und Methoden haben, um das gewünschte Verhalten zu erreichen.
 
-Aber dennoch gibt es einige Funktionen und Operatoren in Python, die man nicht direkt über Methoden steuern kann. Was zum Beispiel ist `len(myClass)`? Um in diesen Fällen den Rückgabe-Wert zu bestimmen, kommen die Dunder Methoden zum Einsatz (in dem Fall `myClass.__len__()`).
+Aber dennoch gibt es einige Funktionen und Operatoren in Python, die man nicht direkt über Methoden steuern kann. Was zum Beispiel ist `len(myObj)`? Um in diesen Fällen den Rückgabe-Wert zu bestimmen, kommen die Dunder Methoden zum Einsatz (in dem Fall `myObj.__len__()`).
 
 > WICHTIG: \
 Diese Dunder Methoden Sollten nie direkt aufgerufen werden, sondern werden vom Interpreter automatisch aufgerufen, wenn sie gebraucht werden.
@@ -78,29 +78,29 @@ Hier eine Übericht über die wichtigsten:
 
 | Methoden-Name | Aufgerufen durch |
 | ------------- | ------------- |
-| `__post_init__(self)` | `myVar = myClass(args)`  |
-| `__len__(self)` | `len(myClass)`  |
-| `__str__(self)` | `str(myClass)`  |
-| `__getitem__(self, index)` | `myClass[0]`  |
+| `__post_init__(self)` | `myObj = myClass(args)`  |
+| `__len__(self)` | `len(myObj)`  |
+| `__str__(self)` | `str(myObj)`  |
+| `__getitem__(self, index)` | `myObj[0]`  |
 | Vorzeichen |  |
-| `__pos__(self)` | `+myClass`  |
-| `__neg__(self)` | `-myClass`  |
+| `__pos__(self)` | `+myObj`  |
+| `__neg__(self)` | `-myObj`  |
 | Vergleiche |  |
-| `__lt__(self, other)` | `myClass < other`  |
-| `__eq__(self, other)` | `myClass == other`  |
-| `__gt__(self, other)` | `myClass > other`  |
+| `__lt__(self, other)` | `myObj < other`  |
+| `__eq__(self, other)` | `myObj == other`  |
+| `__gt__(self, other)` | `myObj > other`  |
 | Rechnen-Operatoren |  |
-| `__add__(self, other)` | `myClass + other`  |
-| `__sub__(self, other)` | `myClass - other`  |
-| `__mul__(self, other)` | `myClass * other`  |
-| `__div__(self, other)` | `myClass / other`  |
+| `__add__(self, other)` | `myObj + other`  |
+| `__sub__(self, other)` | `myObj - other`  |
+| `__mul__(self, other)` | `myObj * other`  |
+| `__div__(self, other)` | `myObj / other`  |
 | Rechnen-Operatoren (rechts) |  |
-| `__radd__(self, other)` | `other + myClass`  |
-| `__rsub__(self, other)` | `other - myClass`  |
-| `__rmul__(self, other)` | `other * myClass`  |
-| `__rdiv__(self, other)` | `other / myClass`  |
+| `__radd__(self, other)` | `other + myObj`  |
+| `__rsub__(self, other)` | `other - myObj`  |
+| `__rmul__(self, other)` | `other * myObj`  |
+| `__rdiv__(self, other)` | `other / myObj`  |
 
-> Die radd (Right-Add) usw. sind deswegen nötig weil Python als erstes den linken Term überprüft. Also bei `other + myClass` wird erst `other.__add__()` aufgerufen, die aber unsere Klasse wahrscheinlich nicht kennt. Wenn `other.__add__()` einen Fehler ausgibt, probiert Python einfach `myClass.__radd__()`.
+> Die radd (Right-Add) usw. sind deswegen nötig weil Python als erstes den linken Term überprüft. Also bei `other + myObj` wird erst `other.__add__()` aufgerufen, die aber unsere Klasse wahrscheinlich nicht kennt. Wenn `other.__add__()` einen Fehler ausgibt, probiert Python einfach `myObj.__radd__()`.
 
 ### A6
 Erstelle eine Datenklasse Color, die drei Eigenschaften red, green, blue besitzt. Die Werte dürfen dabei nur eine ganze Zahl zwischen 0 und 255 sein. \
