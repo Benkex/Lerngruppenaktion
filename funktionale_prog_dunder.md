@@ -35,7 +35,7 @@ Fachbegriffe:
 - Erstell die zweistellige lambda-Funktion `kreuz`, die zwei Listen nimmt, und die Kreuzprodukt von denen zurück gibt!\
     - Für `num = [1, 2, 3], let = ['x', 'y']` ist `kreuz(num, let) == [(1, 'x'), (1, 'y'), (2, 'x'), (2, 'y'), (3, 'x'), (3, 'y')]`
 
-### A2
+### A3
 - Erstell die zweistellige lambda-Funktion `nebenklasse`, die ein integer `v` und ein Sequence von integers `U` nimmt,
 und ein **set** zurück gibt, in der du alle Elemente aus `U` zu `v` addierst! Verwende dabei die vorher definierte `add_operation`!\
 Ein set-comprehension macht man wie üblich, aber mit geschwungene Klammern: `{change(item) for item in seq if bedingung}`\
