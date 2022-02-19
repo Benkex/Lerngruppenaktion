@@ -23,7 +23,7 @@ Fachbegriffe:
 
 ### A
 - Erstell die einstellige lambda-Funktion `mittelwert`, die eine Liste von integers nimmt (darfst du voraussetzen), und den Mittelwert von denen zurück gibt! Welche eingebaute Funktion ist uns dabei besonders nützlich?
-- Erstell die einstellige lambda-Funktion `teiler`, die alle Teiler von `n` zurück gibt!
+- Erstell die einstellige lambda-Funktion `teiler`, die alle Teiler von `n` in einer Liste zurück gibt!
 - Erstell die zweistellige lambda-Funktion `gem_teiler`, die die gemeinsame Teiler von `a` und `b` in einer Liste zurück gibt!
 - Erstell die zweistellige lambda-Funktion `tuplize`, die `(a, b)` zurück gibt!
 - Erstell die zweistellige lambda-Funktion `kreuz`, die zwei Listen nimmt, und die Kreuzprodukt von denen zurück gibt!\
