@@ -13,6 +13,9 @@ nebenklasse = lambda v, U: {add_operation(v, n) for n in U}
 sum_up = lambda n: (sum_up(n - 1) + n if n > 0 else 0)
 fakultaet = lambda n: (n * fakultaet(n - 1) if n > 0 else 1)
 # fibo = lambda n: [fibo(n - 2) + fibo(n - 1) if n > 1 else n]
+fibo = lambda n: ([abs(fibo(x)) for x in range(-1, -n-1, -1)]
+		  if n >= 0 else fibo(n+1)+fibo(n+2)
+		  if n < -2 else n+1)
 
 def celsius_to_fahrenheit(deg_c):
     deg_f = (deg_c * 1.8 + 32)
