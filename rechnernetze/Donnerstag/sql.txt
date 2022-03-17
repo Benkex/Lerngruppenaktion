@@ -1,0 +1,34 @@
+--SELECT ProductName AS Produkt, Price AS Preis  --SELECT = PI, AS = DELTA
+--FROM Products
+--WHERE Price < 10; --SIGMA
+
+--SIGMA[Price < 10]Products
+SELECT *
+FROM Products
+WHERE Price < 10;
+
+--PI[ProductName, Price](SIGMA[Price < 10]Products)
+SELECT ProductName, Price
+FROM Products
+WHERE Price < 10;
+
+--DELTA[ProductName -> Produkt, Price -> Preis](PI[ProductName, Price](SIGMA[Price < 10]Products))
+SELECT ProductName AS Produkt, Price AS Preis
+FROM Products
+WHERE Price < 10;
+
+--------------------------------------------
+
+--Natürlicher Verbund:
+SELECT ProductName AS PN, CategoryName AS CN
+FROM Products NATURAL JOIN Categories;
+
+--Expliziter Verbund:
+SELECT ProductName AS PN, CategoryName AS CN
+FROM Products P JOIN Categories C
+ON P.CategoryID = C.CategoryID;
+
+--Impliziter Verbund:
+SELECT ProductName AS PN, CategoryName AS CN
+FROM Products P, Categories C
+WHERE P.CategoryID = C.CategoryID;

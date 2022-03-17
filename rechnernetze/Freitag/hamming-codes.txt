@@ -1,0 +1,44 @@
+gerade Anzahl von 1 => Ergebnis 0
+ungerade Anzahl von 1 => Ergebnis 1
+Fkkkkkk
+1100101
+- - - - 1+0+1+1 = 1 -> FALSCH!
+ --  -- 1+0+0+1 = 0 -> Korrekt
+   ---- 0+1+0+1 = 0 -> Korrekt
+|
+V
+
+das originelle Nachricht war
+0100101
+..................
+Der Sinn dieser Striche:
+1010101 = - - - -
+0110011 =  --  --
+0001111 =    ----
+
+90° uhrzeigersinns gedreht:
+001 = 1
+010 = 2
+011 = 3
+100 = 4
+101 = 5
+110 = 6
+111 = 7
+
+kFkFkFkkkkk
+ 0 1 1
+10010110101
+- - - - - - Korrekt
+ --  --  -- FALSCH
+   ----     FALSCH
+       ---- Korrekt
+     |
+     V
+10010010101
+.........................
+
+123456789012345678901
+- - - - - - - - - - - 
+ --  --  --  --  --  
+   ----    ----    --
+       --------

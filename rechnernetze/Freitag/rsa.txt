@@ -1,0 +1,21 @@
+p = 5
+q = 11
+
+n = p*q = 55
+m = (p-1)*(q-1) = 40
+e = ein Prim, was teilerfremd mit "m" ist. => man kann m nicht mit e teilen
+   = 7 
+=============
+e * d mod m = 1 
+=============
+Ö(ffentliche): (e, n) = (zu m teilerfremde prim, p*q)
+G(eheime):     (d, n) = (..., p*q)
+
+p, q bestimmen: klar, wenn n klein ist, und es eindeutig ist, welche primzahlen wir multiplizieren
+e, d können wir von den schlüsseln auslesen
+   >>> Wichtige Eigenschaft: e * d mod m = 1  => wenn das stimmt, dann ist es mathematisch korrekt
+   >>> e muss auch teilerfremd mit m sein
+Ö: (e, n)
+Geheime Nachricht = (Originelle Nachricht)^e mod n
+P: (d, n)
+Entschlüsselte Nachricht = (Geheime)^d mod n
