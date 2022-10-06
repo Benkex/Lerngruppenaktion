@@ -1,2 +1,4 @@
 desktop.ini
 __pycache__
+*.bak
+.pytest_cache
