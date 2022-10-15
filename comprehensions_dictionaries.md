@@ -124,7 +124,7 @@ for key in ages_of_people.keys():
     print(key)
 
 # Anmerkung: man kann hier einfach "for key in ages_of_people" schreiben,
-# in dieser Situation entspricht "ages_of_people" die keys von ages_of_people.
+#   "ages_of_people" entspricht hier die keys von ages_of_people (ages_of_people.keys()).
 # Genauso mit dem convertieren: list(ages_of_people) == list(ages_of_people.keys())
 for key in ages_of_people:
     print(key)
