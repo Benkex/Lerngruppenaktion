@@ -51,7 +51,7 @@ Du kennst schon Funktionen und **return**. Wenn du statt return, `yield` schreib
 Der Unterschied: Wenn du eine _normale Funktion_ aufrufst, sie arbeitet bis sie zum return ankommt, dann gibt sie das zurück, was nach dem return steht, und das war's. Wenn du sie _nochmal_ aufrufst, fängt sie wieder **am Anfang** an.\
 Ein Generator macht _erst mal_ quasi das selbe: er arbeitet bis er zum `yield` ankommt, dann gibt er das zurück, was danach steht. Aber wenn du ihn nochmal aufrufst, fängt er da an, wo er letztens aufgehört hat: nach dem `yield`, und geht weiter.
 Man bekommt die yield-Werte auch ein bisschen anders: man muss next() auf dem Generator aufrufen, um das nächste Element zu erhalten. Oder eben mit einer for-Schleife durchiterieren.
-```
+```py
 def gen(n: int):
     yield "Round 1"
     # stop, und dann von hier geht's weiter
@@ -83,7 +83,7 @@ Eine Kombination aus comprehensions und Generatoren. _Die Schreibweise_ untersch
 Muster: `gen_comp = (change(element) for element in sequence if bedingung)`
 > Natürlich sind hier auch mehrere for-Schleifen erlaubt.\
 Verwendung von Generator-comprehensions ist das selbe, wie beim Generatoren:
-```
+```py
 g = (2**n for n in [4, 5, 6] if n%2==0)
 print(next(g))
 print(next(g))
@@ -119,11 +119,12 @@ Wie du sehen kannst, es folgt folgendes Muster: `dict = {key: value, key: value,
 Du kannst auch alle keys und alle values eines Dictionary angucken: `ages_of_people.keys()` und `ages_of_people.values()` sind sogenannten View-Objekte (also _keine_ Listen, sondern eigentlich Generatoren), die mit dem Dictionary "synchronisiert" sind: wenn der Dictionary sich verändert, verändern sich diese View-Objekte auch.\
 Deshalb muss man sie erst zu einer Liste convertieren (`list(ages_of_people.keys())` und `list(ages_of_people.values())`), wenn man sie als eine Liste benutzen möchte.\
 Ansonst kann man durch diese Views ruhig durchiterieren:
-```
+```py
 for key in ages_of_people.keys():
     print(key)
 
-# Anmerkung: man kann hier einfach "for key in ages_of_people" schreiben, in dieser Situation entspricht "ages_of_people" die keys von ages_of_people.
+# Anmerkung: man kann hier einfach "for key in ages_of_people" schreiben,
+# in dieser Situation entspricht "ages_of_people" die keys von ages_of_people.
 # Genauso mit dem convertieren: list(ages_of_people) == list(ages_of_people.keys())
 for key in ages_of_people:
     print(key)
@@ -133,14 +134,14 @@ for value in ages_of_people.values():
 ```
 Wenn man die keys und values beide erhalten möchte, schreibt man `ages_of_people.items()`. Dies ist eine **Liste** von Tuples: `[(key, value), (key, value), ...]`
 Man kann das auch sehr schön durchiterieren:
-```
+```py
 for item in ages_of_people.items():
     print(item)
     print(item[0], item[1])
     
 # da item hier ein tuple ist, können wir tuple-unpacking machen:
-for (key, value) in ages_of_people.items(): # die Klammern um (key, value) kann man weglassen, aber erst mal ist es empfehlenswert, immer die Klammer hinzuschreiben
-    print(key, value)
+for (key, value) in ages_of_people.items(): # die Klammern um (key, value) kann man weglassen,
+    print(key, value)                       # aber erst mal ist es empfehlenswert, immer die Klammer hinzuschreiben
 ```
 
 ## A7
@@ -162,7 +163,7 @@ Erstelle einen Dictionary *mit Dict-comprehension*, der zufällige strings der L
 
 # Trie
 Dictionaries sind auch ideal für einfachere tree Strukturen, wie z.B. die sogenannte "trie" Struktur, womit man eine effizient suchbare Wörterbuch modellieren kann:
-```
+```py
 words = {'A': {'b': {'o': {0: 0},
                       'i': {0: 0,
                             't': {'u': {'r': {0: 0}}}
