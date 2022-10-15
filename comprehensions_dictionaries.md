@@ -151,9 +151,13 @@ for (key, value) in ages_of_people.items(): # die Klammern um (key, value) kann 
 
 ## A8
 Fasse jetzt den Dictionary `farbe` zu einem anderen Dictionary (`farbe_anzahl`) zusammen, der die Farben als keys, und Anzahl der Sachen mit dieser Farbe als values hat!
-Es soll am Ende z.B. so aussehen: `{'Farbe1': 3, 'Farbe2': 1, 'Farbe3': 4}
+Es soll am Ende z.B. so aussehen: `{'Farbe1': 3, 'Farbe2': 1, 'Farbe3': 4}`
 
 # Dict-comprehension
+Dict-comprehension geht gleich so, wie List-comprehension, nur ist es halt ein Dictionary.
+Beispiel: `f_x_hoch_2 = {x: pow(x, 2) for x in range(100)}
+
+## A9
 Erstelle einen Dictionary *mit Dict-comprehension*, der zufällige strings der Länge 4 als keys, und zufällige Zahlen als values hat!
 
 # Trie
