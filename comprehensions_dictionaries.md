@@ -83,7 +83,8 @@ Erstell eine Generator-funktion mit einem Argument `n`, die die rekursive `fakul
 Eine Kombination aus comprehensions und Generatoren. _Die Schreibweise_ unterschiedet sich nur an den Klammern:\
 **bei Generator-comprehensions benutzen wir runde Klammern** (also es gibt keinen Tuple-comprehensions!)\
 Muster: `gen_comp = (change(element) for element in sequence if bedingung)`
-> Natürlich sind hier auch mehrere for-Schleifen erlaubt.\
+> Natürlich sind hier auch mehrere for-Schleifen erlaubt.
+
 Verwendung von Generator-comprehensions ist das selbe, wie beim Generatoren:
 ```py
 g = (2**n for n in [4, 5, 6] if n%2==0)
