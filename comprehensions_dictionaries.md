@@ -47,7 +47,7 @@ Vorsicht, `['.', '.', '.']` sollst du auch mit einer List-comprehension machen!
 - Mache eine eindimensionale Liste aus der Liste `telephone`, mit umgedrehten Spalten-reihenfolge! (Ergebnis soll: `[3, 2, 1, 6, 5, 4, 9, 8, 7]` sein)
 
 ## Generatoren
-Du kennst schon Funktionen und return. Wenn du statt return, `yield` scheibst, BAMM, you've got a generator (auch Iterator genannt)!\
+Du kennst schon Funktionen und **return**. Wenn du statt return, `yield` schreibst, BAMM, you've got a generator (auch Iterator genannt)!\
 Der Unterschied: Wenn du eine _normale Funktion_ aufrufst, sie arbeitet bis sie zum return ankommt, dann gibt sie das zurück, was nach dem return steht, und das war's. Wenn du sie _nochmal_ aufrufst, fängt sie wieder **am Anfang** an.\
 Ein Generator macht _erst mal_ quasi das selbe: er arbeitet bis er zum `yield` ankommt, dann gibt er das zurück, was danach steht. Aber wenn du ihn nochmal aufrufst, fängt er da an, wo er letztens aufgehört hat: nach dem `yield`, und geht weiter.
 Man bekommt die yield-Werte auch ein bisschen anders: man muss next() auf dem Generator aufrufen, um das nächste Element zu erhalten. Oder eben mit einer for-Schleife durchiterieren.
