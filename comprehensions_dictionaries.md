@@ -1,6 +1,6 @@
 # Comprehensions
 ## List-comprehension
-Es kommt häufig vor, dass wir einfach eine Liste, oder ein Dictionary mit der Hilfe einer schon existierende Sequence definieren wollen. Wir können auch so vorgehen:
+Es kommt häufig vor, dass wir einfach eine Liste, oder einen Dictionary mit der Hilfe einer schon existierende Sequence definieren wollen. Wir können auch so vorgehen:
 ```
 new_list = []
 for element in sequence:
@@ -144,14 +144,17 @@ for (key, value) in ages_of_people.items(): # die Klammern um (key, value) kann 
 ```
 
 ## A7
-- Erstelle ein Dictionary `farbe` mit Sachen als keys (was du möchtest) und die Farben der Sachen als values. Es sollen dabei mehrere Sachen mit der gleichen Farbe geben!
+- Erstelle einen Dictionary `farbe` mit Sachen als keys (was du möchtest) und die Farben der Sachen als values. Es sollen dabei mehrere Sachen mit der gleichen Farbe geben!
 - Print alle keys von `farbe`!
 - Print alle values von `farbe`!
 - Print alle key-value Paare von `farbe`!
 
 ## A8
+Fasse jetzt den Dictionary `farbe` zu einem anderen Dictionary (`farbe_anzahl`) zusammen, der die Farben als keys, und Anzahl der Sachen mit dieser Farbe als values hat!
+Es soll am Ende z.B. so aussehen: `{'Farbe1': 3, 'Farbe2': 1, 'Farbe3': 4}
 
 # Dict-comprehension
+Erstelle einen Dictionary *mit Dict-comprehension*, der zufällige strings der Länge 4 als keys, und zufällige Zahlen als values hat!
 
 # Trie
 Dictionaries sind auch ideal für einfachere tree Strukturen, wie z.B. die sogenannte "trie" Struktur, womit man eine effizient suchbare Wörterbuch modellieren kann:
