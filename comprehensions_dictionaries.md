@@ -1,7 +1,7 @@
 # Comprehensions
 ## List-comprehension
 Es kommt häufig vor, dass wir einfach eine Liste, oder einen Dictionary mit der Hilfe einer schon existierende Sequence definieren wollen. Wir können auch so vorgehen:
-```
+```py
 new_list = []
 for element in sequence:
     if bedingung:
