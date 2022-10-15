@@ -9,7 +9,7 @@ for element in sequence:
         new_list.append(change(element)) # entspricht new_list += [change(element)]
 ```
 Aber das ist schon 4 Zeilen Code! Können wir diese Liste irgendwie nicht so definieren, wie die Mathematiker?\
-Also Sei `L = {C(x) | x ∈ M und B(x)}`, wobei C(x) eine Funktion ist, die x verwandelt, und B(x) ist eine Bedingung über x, die entweder wahr oder falsch ist.\
+Also wie `L = {C(x) | x ∈ M und B(x)}`, wobei C(x) eine Funktion ist, die x verwandelt, und B(x) ist eine Bedingung über x, die entweder wahr oder falsch ist.\
 z.B. `{x/2 | x ∈ [-5, 1000) und x^2 < 1000}`\
 Aber genau das machen Comprehensions. Erst mal gucken wir, wie man das hier ohne List-comprehension machen würde:
 ```py
