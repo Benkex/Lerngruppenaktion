@@ -11,7 +11,7 @@ for element in sequence:
 Aber das ist schon 4 Zeilen Code! Können wir diese Liste irgendwie nicht so definieren, wie die Mathematiker?\
 z.B. `{x/2 | x ∈ [-5, 1000) und x^2 < 1000}`? Das wäre ja ziemlich elegant.
 Aber genau das machen Comprehensions. Erst mal gucken wir, wie man das hier ohne List-comprehension machen würde:
-```
+```py
 new_list = []
 for x in range(-5, 1000): # range ist exklusiv
     if x**2 < 1000:
@@ -19,7 +19,7 @@ for x in range(-5, 1000): # range ist exklusiv
 ```
 Das können wir jetzt als eine List-comprehension schreiben:\
 `M = [x/2 for x in range(-5, 1000) if x**2 < 1000]`\
-Das ist doch schön, ne?:) Sieht sehr ähnlich zur mathematischen Definition aus.\
+Das ist doch schön, oder?:) Sieht sehr ähnlich zur mathematischen Definition aus.\
 Also, das Muster für ein List-comprehension ist folgendes: `list_comp = [change(element) for element in sequence if bedingung]`
 > Man kann auch mehrere for-Schleifen benutzen: `list_comp = [change(e1, e2, ...) for e1 in seq1 if bed1 for e2 in seq2 if bed2 ...]`\
 > Dabei ist die **Reihenfolge** der Schleifen **wichtig**!
