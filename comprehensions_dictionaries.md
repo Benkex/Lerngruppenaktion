@@ -80,7 +80,8 @@ for round in gen(6):
 Erstell eine Generator-funktion mit einem Argument `n`, die die rekursive `fakul` Funktion aus dem ersten Blatt benutzt, um alle Fakultäten von 1 bis n zu yielden! (also sie soll 1!, 2!, 3!, ... yielden)
 
 ## Generator-comprehension
-Eine Kombination aus comprehensions und Generatoren. _Die Schreibweise_ unterschiedet sich nur an den Klammern: **bei Generator-comprehensions benutzen wir runde Klammern** (also es gibt nichts wie Tuple-comprehensions)
+Eine Kombination aus comprehensions und Generatoren. _Die Schreibweise_ unterschiedet sich nur an den Klammern:\
+**bei Generator-comprehensions benutzen wir runde Klammern** (also es gibt keinen Tuple-comprehensions!)\
 Muster: `gen_comp = (change(element) for element in sequence if bedingung)`
 > Natürlich sind hier auch mehrere for-Schleifen erlaubt.\
 Verwendung von Generator-comprehensions ist das selbe, wie beim Generatoren:
