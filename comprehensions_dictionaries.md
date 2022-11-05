@@ -106,30 +106,30 @@ for round in (2**n for n in [4, 5, 6] if n%2==0):
 # Dictionaries
 ## Was sind sie?
 Wir kennen schon Listen und Tuples alle. (Listen sind veränderlich, Tuples nicht.)
-- Listen und Tuples enthalten einfach mehrere einzelne Elemente. Es kommt aber häufig vor, dass bestimmte Daten eine Beziehung zu anderen Daten haben.
-- Wir haben z.B. eine Liste von Namen:  
+  - Listen und Tuples enthalten einfach mehrere einzelne Elemente. Es kommt aber häufig vor, dass bestimmte Daten eine Beziehung zu anderen Daten haben.
+  - Wir haben z.B. eine Liste von Namen:  
   `names = ['Coraline', 'Uwe', 'Fritz']` und eine Liste, was den Alter dieser Personen enthält:  
   `ages = [16, 68, 32]`
-- Das ist aber doch nicht wirklich nützlich. Wir wissen zwar, dass Coraline die erste Element in der Liste `names` ist,
+  - Das ist aber doch nicht wirklich nützlich. Wir wissen zwar, dass Coraline die erste Element in der Liste `names` ist,
 deshalb gehört das erste Element in der Liste `ages` zu ihr, so hat Coraline der Alter von 16.
-- z.B. würden wir es so benutzen: `print(f"{names[0]} ist {ages[0]} Jahre alt.")`
-- Wir haben aber keine direkte Verbindung zwischen Coraline und 16, und es ist auch nicht anschaulich.  
+  - z.B. würden wir es so benutzen: `print(f"{names[0]} ist {ages[0]} Jahre alt.")`
+  - Wir haben aber keine direkte Verbindung zwischen Coraline und 16, und es ist auch nicht anschaulich.  
   Aber genau dafür sind Dictionaries da!
 
 Dictionary ist der nützlichste Datenstruktur, wenn wir Dinge miteinander verknüpfen / zueinander zuordnen wollen.  
-- Der obige Beispiel mit einem Dict:  
+  - Der obige Beispiel mit einem Dict:  
   `ages_of_people = {'Coraline': 16, 'Uwe': 68, 'Fritz': 32}`  
   Die Verbindung ist sofort sichtbar.
-- Wie du sehen kannst, es folgt folgendes Muster:  
+  - Wie du sehen kannst, es folgt folgendes Muster:  
   `dict = {key: value, key: value, ...}`  
-- "key" und "value", weil das _key_ ist der _Schlüssel_, mit dem du zum _value_ (Wert) zugreifen kannst, durch indexieren:  
+  - "key" und "value", weil das _key_ ist der _Schlüssel_, mit dem du zum _value_ (Wert) zugreifen kannst, durch indexieren:  
   `ages_of_people['Uwe']` entspricht `68`,  
   `print(ages_of_people['Fritz'])` printet `32`.
-- Du kannst auch alle keys und alle values eines Dictionary angucken:  
+  - Du kannst auch alle keys und alle values eines Dictionary angucken:  
   `ages_of_people.keys()` und `ages_of_people.values()` sind sogenannten View-Objekte  
   (also _keine_ Listen, sondern eigentlich Generatoren), die mit dem Dictionary "synchronisiert" sind:  
   wenn der Dictionary sich verändert, verändern sich diese View-Objekte auch.
-- Deshalb muss man sie erst zu einer Liste convertieren:  
+  - Deshalb muss man sie erst zu einer Liste convertieren:  
   `list(ages_of_people.keys())` und `list(ages_of_people.values())`, wenn man sie als eine Liste benutzen möchte. Ansonsten kann man durch diese Views ruhig durchiterieren:
 ```py
 for key in ages_of_people.keys():
