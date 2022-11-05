@@ -106,30 +106,30 @@ for round in (2**n for n in [4, 5, 6] if n%2==0):
 # Dictionaries
 ## Was sind sie?
 Wir kennen schon Listen und Tuples alle. (Listen sind veränderlich, Tuples nicht.)
-  - Listen und Tuples enthalten einfach mehrere einzelne Elemente. Es kommt aber häufig vor, dass bestimmte Daten eine Beziehung zu anderen Daten haben.
-  - Wir haben z.B. eine Liste von Namen:  
+  * Listen und Tuples enthalten einfach mehrere einzelne Elemente. Es kommt aber häufig vor, dass bestimmte Daten eine Beziehung zu anderen Daten haben.
+  * Wir haben z.B. eine Liste von Namen:  
   `names = ['Coraline', 'Uwe', 'Fritz']` und eine Liste, was den Alter dieser Personen enthält:  
   `ages = [16, 68, 32]`
-  - Das ist aber doch nicht wirklich nützlich. Wir wissen zwar, dass Coraline die erste Element in der Liste `names` ist,
+  * Das ist aber doch nicht wirklich nützlich. Wir wissen zwar, dass Coraline die erste Element in der Liste `names` ist,
 deshalb gehört das erste Element in der Liste `ages` zu ihr, so hat Coraline der Alter von 16.
-  - z.B. würden wir es so benutzen: `print(f"{names[0]} ist {ages[0]} Jahre alt.")`
-  - Wir haben aber keine direkte Verbindung zwischen Coraline und 16, und es ist auch nicht anschaulich.  
+  * z.B. würden wir es so benutzen: `print(f"{names[0]} ist {ages[0]} Jahre alt.")`
+  * Wir haben aber keine direkte Verbindung zwischen Coraline und 16, und es ist auch nicht anschaulich.  
   Aber genau dafür sind Dictionaries da!
 
 Dictionary ist der nützlichste Datenstruktur, wenn wir Dinge miteinander verknüpfen / zueinander zuordnen wollen.  
-  - Der obige Beispiel mit einem Dict:  
+  * Der obige Beispiel mit einem Dict:  
   `ages_of_people = {'Coraline': 16, 'Uwe': 68, 'Fritz': 32}`  
   Die Verbindung ist sofort sichtbar.
-  - Wie du sehen kannst, es folgt folgendes Muster:  
+  * Wie du sehen kannst, es folgt folgendes Muster:  
   `dict = {key: value, key: value, ...}`  
-  - "key" und "value", weil das _key_ ist der _Schlüssel_, mit dem du zum _value_ (Wert) zugreifen kannst, durch indexieren:  
+  * "key" und "value", weil das _key_ ist der _Schlüssel_, mit dem du zum _value_ (Wert) zugreifen kannst, durch indexieren:  
   `ages_of_people['Uwe']` entspricht `68`,  
   `print(ages_of_people['Fritz'])` printet `32`.
-  - Du kannst auch alle keys und alle values eines Dictionary angucken:  
+  * Du kannst auch alle keys und alle values eines Dictionary angucken:  
   `ages_of_people.keys()` und `ages_of_people.values()` sind sogenannten View-Objekte  
   (also _keine_ Listen, sondern eigentlich Generatoren), die mit dem Dictionary "synchronisiert" sind:  
   wenn der Dictionary sich verändert, verändern sich diese View-Objekte auch.
-  - Deshalb muss man sie erst zu einer Liste convertieren:  
+  * Deshalb muss man sie erst zu einer Liste convertieren:  
   `list(ages_of_people.keys())` und `list(ages_of_people.values())`, wenn man sie als eine Liste benutzen möchte. Ansonsten kann man durch diese Views ruhig durchiterieren:
 ```py
 for key in ages_of_people.keys():
@@ -192,14 +192,14 @@ Dictionaries sind auch ideal für einfachere tree Strukturen, wie z.B. die sogen
 Um das verstehen zu können, gucken wir erst verschachtelte Dictionaries an.  
 Betrache folgendes Beispiel:  
 1. Sechs Schüler (Anna, Bella, Chris, Dennis, Egor und Fabian) haben Präsentationen in verschiedenen Fächern gemacht.
-    - Zum Beispiel (Bella und Chris in Mathe), (Egor in Physik), (Dennis, Anna und Fabian in Chemie).
-    - Wir speichern jetzt die Anzahl der Leute, die den gleichen Fach gewählt haben.  
+    * Zum Beispiel (Bella und Chris in Mathe), (Egor in Physik), (Dennis, Anna und Fabian in Chemie).
+    * Wir speichern jetzt die Anzahl der Leute, die den gleichen Fach gewählt haben.  
     Wir wollen also so was erreichen: `print(anzahl_leute_in['Fach'])` printet die Anzahl der Leute, die ihre Präsi im Fach "Fach" gemacht haben.
-    - Dafür brauchen wir einen Dictionary, und wir definieren es auf die folgende Weise:
+    * Dafür brauchen wir einen Dictionary, und wir definieren es auf die folgende Weise:
     ```py
     anzahl_leute_in = {'Mathe': 2, 'Physik': 1, 'Chemie': 3}
     ```
-    - Dabei können wir dann zum Anzahl durch Indexieren zugreifen:  
+    * Dabei können wir dann zum Anzahl durch Indexieren zugreifen:  
     `print(anzahl_leute_in['Chemie'])` wird eben `3` ausprinten,  
     `print(anzahl_leute_in['Mathe'])` wird `2` ausprinten und  
     `print(anzahl_leute_in['Physik'])` wird `1` ausprinten.
@@ -213,8 +213,8 @@ Betrache folgendes Beispiel:
     | Chemie | Dennis | 2.7  |
     | Chemie | Anna   | 1.7  |
     | Chemie | Fabian | 2.0  |
-  - Jetzt wollen wir gerne innerhalb eines Faches speichern, was für eine Note die Leute gekriegt haben.
-  - Dafür machen wir erst mal 3 Dictionaries zu den drei Fächer, in dem wir die Leute mit ihren Noten "verbinden":
+  * Jetzt wollen wir gerne innerhalb eines Faches speichern, was für eine Note die Leute gekriegt haben.
+  * Dafür machen wir erst mal 3 Dictionaries zu den drei Fächer, in dem wir die Leute mit ihren Noten "verbinden":
   ```py
   mathe_note_von = {'Bella': 1.3, 'Chris': 2.0}
   physik_note_von = {'Egor': 1.0}
@@ -227,12 +227,12 @@ Betrache folgendes Beispiel:
   # usw.
   # Die Definition hier ist identisch mit der vorigen Definition, sieht aber besser aus.
   ```
-  - Also `print(mathe_note_von['Chris'])` printet jetzt `2.0`,  
+  * Also `print(mathe_note_von['Chris'])` printet jetzt `2.0`,  
     `print(chemie_note_von['Anna'])` printet `1.7` usw.
-  - *Definieren wir* mal einen neuen (verschachtelten) Dict `note_von_fach_person`, die sich so verhält:  
+  * *Definieren wir* mal einen neuen (verschachtelten) Dict `note_von_fach_person`, die sich so verhält:  
     `print(note_von_fach_person['Fach']['Person'])` printet die Note des "Person"s in dem angegebenen "Fach".
-  - Beispiel: `print(note_von_fach_person['Physik']['Egor'])` soll `1.0` printen.
-  - Es bleibt nur noch ein Schritt übrig, um `note_von_fach_person` zu definieren.  
+  * Beispiel: `print(note_von_fach_person['Physik']['Egor'])` soll `1.0` printen.
+  * Es bleibt nur noch ein Schritt übrig, um `note_von_fach_person` zu definieren.  
     **Versuche es erst mal selbst! Gucke nicht sofort in die Lösung!**  
     Kombiniere dein Wissen aus (1.) und (2.)!
   <details>
