@@ -167,8 +167,8 @@ Fasse jetzt den Dictionary `farbe` zu einem anderen Dictionary (`farbe_anzahl`) 
 Es soll am Ende z.B. so aussehen: `{'Farbe1': 3, 'Farbe2': 1, 'Farbe3': 4}`
 
 # Dict-comprehension
-Dict-comprehension geht gleich so, wie List-comprehension, nur ist es halt ein Dictionary.
-Beispiel: `f_x_hoch_2 = {x: pow(x, 2) for x in range(100)}
+Dict-comprehension geht gleich so, wie List-comprehension, nur ist es halt ein Dictionary.  
+Beispiel: `f_x_hoch_2 = {x: pow(x, 2) for x in range(100)}`
 
 ## A9
 Erstelle einen Dictionary `str_int` *mit Dict-comprehension*, der zufällige strings der Länge 4 als keys, und zufällige Zahlen als values hat!
