@@ -6,9 +6,8 @@
 > So ist es auch bei einer rekursiven Funktion: es ruft sich selbst auf,
 > nur mit anderen Argumenten. Also quasi nochmal das ganze Bild
 > in einem Teil des Bildes.
-> Deshalb benutzt man gerne Rekursion, um einen Fraktal zu erstellen.
-> Das werden wir schließlich auch machen. Aber erst arbeiten wir mit
-> einfacheren Rekursionen.
+> Deshalb benutzt man gerne Rekursion, um einen Fraktalbild zu erstellen.
+> Wir werden jetzt einfache Beispiele für rekursion betrachten.
 
 ## A1:
 Erstelle eine Funktion `try_rekursion`, die als Argument eine ganze Zahl `n` nimmt.
