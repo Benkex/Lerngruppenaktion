@@ -348,6 +348,7 @@ Erstelle Funktionen `insert_to(trie: dict, word: str)` und `search_in(trie: dict
   <details><summary>Hint</summary>
   Gehe Buchstabe nach Buchstabe. Erste Buchstabe von `wort` soll im ersten "layer" von trie sein, dann zweite Buchstabe im zweiten "layer" im entsprechenden sub-Dict, usw. Beispiel: `wort = "Birne"`. Dann checke ich, ob `B` im 1. layer von trie ist, wenn ja, gehe ich im sub-Dict von `B` rein, wenn nicht, füge ich `B` einfach rein mit einem leeren subdict, und gehe da rein.
   </details>
+- `search_in` soll zurückgeben, ob der Argument `word` in dem angegebenen `trie` enthalten ist. Es geht auch ohne Rekursion.
   <details><summary>Hint</summary>
   Checke die Buchstaben einzeln: ist die erste Buchstabe im ersten "layer" von trie? Wenn ja, muss ich in dem sub-Dict von diesem Buchstaben weiter suchen, wenn nicht, breche ab.
   </details>
