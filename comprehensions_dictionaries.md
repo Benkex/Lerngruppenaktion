@@ -162,28 +162,183 @@ Dict-comprehension geht gleich so, wie List-comprehension, nur ist es halt ein D
 Beispiel: `f_x_hoch_2 = {x: pow(x, 2) for x in range(100)}
 
 ## A9
-Erstelle einen Dictionary *mit Dict-comprehension*, der zufällige strings der Länge 4 als keys, und zufällige Zahlen als values hat!
+Erstelle einen Dictionary `str_int` *mit Dict-comprehension*, der zufällige strings der Länge 4 als keys, und zufällige Zahlen als values hat!
+- `str_int` soll 8 Items haben!
+- Benutze dabei `chr(num)`, str * int Multiplikation und `random.randint(start, end)`!
 
-# Trie
-Dictionaries sind auch ideal für einfachere tree Strukturen, wie z.B. die sogenannte "trie" Struktur, womit man eine effizient suchbare Wörterbuch modellieren kann:
-```py
-words = {'A': {'b': {'o': {0: 0},
-                      'i': {0: 0,
-                            't': {'u': {'r': {0: 0}}}
-                           }
-                     },
-                'p': {'f': {'e': {'l': {0: 0}}}}
-               }
-         }
+## A10
+Erstelle einen Dict `str_float` *mit Dict-comprehension*, der das gleiche ist, wie `str_int`, nur sollen die Values jetzt floats sein.
+- Benutze dabei `float(num)` und `str_int.items()`!
+
+## A11
+Erstelle einen Dict `str_double` *mit Dict-comprehension*, der das gleiche ist, wie `str_float`, nur sollen die Values jetzt mit 2 multipliziert werden.
+- Benutze dabei `str_int.keys()`, `str_int.values()` und `zip(seq1, seq2)`!
+
+---
+
+---
+
+# -------------- Trie ----------------
+Dictionaries sind auch ideal für einfachere tree Strukturen, wie z.B. die sogenannte *trie*-Struktur, womit man eine effizient suchbare Wörterbuch modellieren kann.  
+Um das verstehen zu können, gucken wir erst verschachtelte Dictionaries an.  
+Betrache folgendes Beispiel:  
+1. Sechs Schüler (Anna, Bella, Chris, Dennis, Egor und Fabian) haben Präsentationen in verschiedenen Fächern gemacht.
+    - Zum Beispiel (Bella und Chris in Mathe), (Egor in Physik), (Dennis, Anna und Fabian in Chemie).
+    - Wir speichern jetzt die Anzahl der Leute, die den gleichen Fach gewählt haben.  
+    Wir wollen also so was erreichen: `print(anzahl_leute_in['Fach'])` printet die Anzahl der Leute, die ihre Präsi im Fach "Fach" gemacht haben.
+    - Dafür brauchen wir einen Dictionary, und wir definieren es auf die folgende Weise:
+    ```py
+    anzahl_leute_in = {'Mathe': 2, 'Physik': 1, 'Chemie': 3}
+    ```
+    - Dabei können wir dann zum Anzahl durch Indexieren zugreifen:  
+    `print(anzahl_leute_in['Chemie'])` wird eben `3` ausprinten,  
+    `print(anzahl_leute_in['Mathe'])` wird `2` ausprinten und  
+    `print(anzahl_leute_in['Physik'])` wird `1` ausprinten.
+2. Die Schüler haben aber auch Noten bekommen, so sieht es aus:  
+
+    | Fach   | Person | Note |
+    | ------ | ------ | ---- |
+    | Mathe  | Bella  | 1.3  |
+    | Mathe  | Chris  | 2.0  |
+    | Physik | Egor   | 1.0  |
+    | Chemie | Dennis | 2.7  |
+    | Chemie | Anna   | 1.7  |
+    | Chemie | Fabian | 2.0  |
+  - Jetzt wollen wir gerne innerhalb eines Faches speichern, was für eine Note die Leute gekriegt haben.
+  - Dafür machen wir erst mal 3 Dictionaries zu den drei Fächer, in dem wir die Leute mit ihren Noten "verbinden":
+  ```py
+  mathe_note_von = {'Bella': 1.3, 'Chris': 2.0}
+  physik_note_von = {'Egor': 1.0}
+  chemie_note_von = {'Dennis': 2.7, 'Anna': 1.7, 'Fabian': 2.0}
+  # Sie könnten auch so aussehen:
+  mathe_note_von = {
+    'Bella': 1.3,
+    'Chris': 2.0
+  }
+  # usw.
+  # Die Definition hier ist identisch mit der vorigen Definition, sieht aber besser aus.
+  ```
+  - Also `print(mathe_note_von['Chris'])` printet jetzt `2.0`,  
+    `print(chemie_note_von['Anna'])` printet `1.7` usw.
+  - *Definieren wir* mal einen neuen (verschachtelten) Dict `note_von_fach_person`, die sich so verhält:  
+    `print(note_von_fach_person['Fach']['Person'])` printet die Note des "Person"s in dem angegebenen "Fach".
+  - Beispiel: `print(note_von_fach_person['Physik']['Egor'])` soll `1.0` printen.
+  - Es bleibt nur noch ein Schritt übrig, um `note_von_fach_person` zu definieren.  
+    **Versuche es erst mal selbst! Gucke nicht sofort in die Lösung!**  
+    Kombiniere dein Wissen aus (1.) und (2.)!
+  <details>
+    <summary><strong>Lösung</strong></summary>  
+
+    ```py
+    note_von_fach_person = {'Mathe': mathe_note_von, 'Physik': physik_note_von, 'Chemie': chemie_note_von}
+    # oder das geht auch:
+    note_von_fach_person = {
+        'Mathe': {'Bella': 1.3, 'Chris': 2.0},
+        'Physik': {'Egor': 1.0},
+        'Chemie': {'Dennis': 2.7, 'Anna': 1.7, 'Fabian': 2.0}
+    }
+    # oder halt...
+    note_von_fach_person = {
+        'Mathe': {
+            'Bella': 1.3,
+            'Chris': 2.0
+        },
+        'Physik': {
+            'Egor': 1.0
+        },
+        'Chemie': {
+            'Dennis': 2.7,
+            'Anna': 1.7,
+            'Fabian': 2.0
+        }
+    }
+    ```
+  </details>
+
+Wenn du jetzt damit fertig bist, hast du einen verschachtelten Dictionary. Dicts in Dicts, das wird noch spannend:)  
+Wir haben z.B. 4 Wörter: Apfel, Abo, Abi und Abitur. Die wollen wir jetzt in einer *trie*-Struktur speichern.  
+Wenn wir eine *trie*-Struktur veranschaulichen, sieht es so aus:
 ```
-Dies ist verschachtelt: Dictionaries in dictionaries. Die `0: 0` Werte stehen für das Ende eines Wortes. Wie du sehen kannst, `Abi` und `Abitur` sind beide Wörter, beginnen aber mit den gleichen Buchstaben. Deshalb packen wir ein `0: 0` in den Dictionary von `i` rein, um anzuzeigen, dass dies das Ende eines sinnvollen Wortes ist.\
-Wenn man es indexiert:
-- `words['A']` bedeutet folgenden Dict:\
-`{'b': {'o': {0: 0}, 'i': {0: 0, 't': {'u': {'r': {0: 0}}}}}, 'p': {'f': {'e': {'l': {0: 0}}}}}` Das kann man weiter indexieren!
-- `words['A']['b']` bedeutet folgenden Dict:\
-`{'o': {0: 0}, 'i': {0: 0, 't': {'u': {'r': {0: 0}}}}}`...
-- `words['A']['b']['i']` bedeutet folgenden Dict:\
-`{0: 0, 't': {'u': {'r': {0: 0}}}}` etc.
+     words
+       |
+       A
+      / \
+     b   p
+    / \   \
+   i   o   f
+  / \   \   \
+ t   0   0   e
+ |           |
+ u           l
+ |           |
+ r           0
+ |
+ 0
+```
+Die implementierung geht so:
+
+```py
+words = {
+    'A': {
+        'p': {
+            'f': {
+                'e': {
+                    'l': {0: 0}
+                }
+            }
+        },
+        'b': {
+            'o': {0: 0},
+            'i': {
+                0: 0,
+                't': {
+                    'u': {
+                       'r': {0: 0}
+                    }
+                }
+            }
+        }
+    }
+}
+```
+Dies ist jetzt verschachtelt: Dicts in Dicts, nur mit mehr "Levels" als das letze mal.  
+Es ist eine *trie*-Struktur: es speichert Wörter in einem Baum-ähnlichen Form.  
+
+Die `0: 0` Items in diesem Dict `words` stehen für das Ende eines sinnvollen Wortes. Wie du sehen kannst, `Abi` und `Abitur` sind beide sinnvolle Wörter, `Abi` ist aber in `Abitur` enthalten. Deshalb packen wir ein `0: 0` in den Dictionary von `i` rein, um anzuzeigen, dass dies das Ende eines sinnvollen Wortes ist.  
+**So funktioniert es**, wenn man es indexiert:
+- `words` ist so zu sagen der erste "layer".
+- `words['A']` bedeutet folgenden Dict:  
+`{'b': {'o': {0: 0}, 'i': {0: 0, 't': {'u': {'r': {0: 0}}}}}, 'p': {'f': {'e': {'l': {0: 0}}}}}`  
+Dies ist der zweite "layer", der sub-Dict von `A`.
+Das kann man aber ja weiter indexieren! Guck das z.B. an:  
+{<span style="color: magenta">'b': </span><span style="color:red">{'o': {0: 0}, 'i': {0: 0, 't': {'u': {'r': {0: 0}}}}}</span>, 'p': {'f': {'e': {'l': {0: 0}}}}}  
+`'b'` ist der Index für `{'o': {0: 0}, 'i': {0: 0, 't': {'u': {'r': {0: 0}}}}}`.
+- `words['A']['b']` bedeutet `{'o': {0: 0}, 'i': {0: 0, 't': {'u': {'r': {0: 0}}}}}`... (dritte "layer", sub-Dict von `b`)
+- `words['A']['b']['i']` bedeutet `{0: 0, 't': {'u': {'r': {0: 0}}}}` (vierte "layer", sub-Dict von `i`)  
+Hier sieht man schon ein `0: 0` drinnen, also ist `Abi` ein sinnvolles Wort, usw.
 
 Ihr könnt sehen:
-`words['A']['b']['o']` ist gerade `0: 0`, `words['A']['b']['i']`, `words['A']['b']['i']['t']['u']['r']` und `words['A']['p']['f']['e']['l']` auch.
+- `0 in words['A']['b']['i'] == True`...............(das gleiche wie `0 in words['A']['b']['i'].keys() == True`, wie weiter oben erklärt)
+- `0 in words['A']['b']['i']['t']['u']['r'] = True`
+- `0 in words['A']['b']['o'] == True`
+- `0 in words['A']['p']['f']['e']['l'] == True`
+
+Aber
+- `0 in words['A']['b']['i']['t'] == False`
+- `0 in words['A']['p']['f']['e'] == False`
+
+Das macht Sinn, da `'Abit'` und `'Apfe'` keine sinnvolle Wörter sind.  
+Wir haben ja in dem entsprechenden Dict nur dann `0: 0` gespeichert, falls ein sinnvolles Wort an der stelle beendet hat.  
+
+Ok, aber wozu das ganze? Die Sache ist:
+- man kann in einer *trie*-Struktur wirklich wirklich **wirklich** schnell suchen, d.h. checken, ob eine Zeichenkette in `words` enthalten ist. Ich sage Zeichenkette, weil was wir suchen, kann auch `'Ahfdnfjaskfd'` sein, und das ist natürlich kein sinnvolles Wort, sondern nur eine Zeichenkette (`string`).
+
+## A12
+Erstelle Funktionen `insert_to(trie: dict, word: str)` und `search_in(trie: dict, word: str)`!
+- `insert_into` soll den Argument `word` in die trie-Struktur reinnehmen. Die Funktion kann rekursiv sein, muss aber nicht. Es geht sogar einfacher ohne Rekursion.
+  <details><summary>Hint</summary>
+  Gehe Buchstabe nach Buchstabe. Erste Buchstabe von `wort` soll im ersten "layer" von trie sein, dann zweite Buchstabe im zweiten "layer" im entsprechenden sub-Dict, usw. Beispiel: `wort = "Birne"`. Dann checke ich, ob `B` im 1. layer von trie ist, wenn ja, gehe ich im sub-Dict von `B` rein, wenn nicht, füge ich `B` einfach rein mit einem leeren subdict, und gehe da rein.
+  </details>
+  <details><summary>Hint</summary>
+  Checke die Buchstaben einzeln: ist die erste Buchstabe im ersten "layer" von trie? Wenn ja, muss ich in dem sub-Dict von diesem Buchstaben weiter suchen, wenn nicht, breche ab.
+  </details>
