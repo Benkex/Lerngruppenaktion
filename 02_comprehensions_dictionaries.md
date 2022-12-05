@@ -153,7 +153,9 @@ for item in ages_of_people.items():
     
 # da item hier ein tuple ist, können wir tuple-unpacking machen:
 for (key, value) in ages_of_people.items(): # die Klammern um (key, value) kann man weglassen,
-    print(key, value)                       # aber erst mal ist es empfehlenswert, immer die Klammer hinzuschreiben
+    print(key, value)                       # wir haben es hingeschrieben, damit es klar ist,
+                                            # dass es sich eigentlich um ein Tuple handelt, und
+                                            # nicht "zwei Iterationsvariablen"...
 ```
 
 ## A7
