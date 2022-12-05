@@ -1,7 +1,8 @@
 # Lerngruppenaktion
 Willkommen!
 ## Empfohlene Reihenfolge:
-1. rektursion
-2. comprehensions_dicts
-3. funkprog_dundermethods
-4. tree
+1. Rektursion
+2. Comprehensions und Dicts
+3. Funktionale Programmierung
+4. Dundermethods
+5. tree
