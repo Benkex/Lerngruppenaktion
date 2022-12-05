@@ -6,7 +6,7 @@
 > So ist es auch bei einer rekursiven Funktion: es ruft sich selbst auf,
 > nur mit anderen Argumenten. Also quasi nochmal das ganze Bild
 > in einem Teil des Bildes.
-> Deshalb benutzt man gerne Rekursion, um einen Fraktalbild zu erstellen.
+> (Deshalb benutzt man gerne Rekursion, um Fraktalbilder zu erstellen.)
 > Wir werden jetzt einfache Beispiele für rekursion betrachten.
 
 ## A1:
