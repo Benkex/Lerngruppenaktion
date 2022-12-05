@@ -10,7 +10,7 @@ Hier eine Übericht über die wichtigsten:
 
 | Methoden-Name | Aufgerufen durch |
 | ------------- | ------------- |
-| `__post_init__(self)` | `myObj = myClass(args)`  |
+| `__post_init__(self)` | `myObj = MyClass(args)`  |
 | `__len__(self)` | `len(myObj)`  |
 | `__str__(self)` | `str(myObj)`  |
 | `__getitem__(self, index)` | `myObj[0]`  |
