@@ -1,10 +1,22 @@
-### Bäume
+# Bäume
 > In den kommenden Aufgaben, wollen wir uns eine Übersicht über Bäume erschaffen.
 > Dazu erstellen wir uns erst einen einfachen Binärbaum, und gehen später über zu allgemeinen Bäumen.
 > Unterdessen schauen wir uns an wie man auf Bäumen arbeiten kann.
 > Zur Unterstützung kann das in tree.py bereitgestellte Template verwendet werden.
 > Dabei soll stetig auf richtiges Typing geachtet werden.
 > Die meisten Aufgaben lassen sich einfach mit Rekursion lösen.
+
+### Hinweis zu A1:
+Wenn die Klasse Felder (Instanzvariablen) vom gleichen Typ hat, wie die Klasse selbst (wie in diesem Fall für `left` und `right`), dann muss man die **ganze** Typannotation zwischen Anführungszeichen schreiben.  
+Also wenn man `Optional` benutzt, oder Typen vereinigt, muss man die Anführungszeichen um das ganze setzen.  
+Beispiel:
+```py
+@dataclass
+class Hello:
+    child: "Hello"
+    optional_child: "Optional[Hello]"
+    optional_child_2: "Hello | None"
+```
 
 ## A1
 Ergänze die Datenklasse BinaryNode um folgenden Attribute:
