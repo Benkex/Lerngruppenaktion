@@ -194,7 +194,13 @@ Erstelle einen Dict `str_double` *mit Dict-comprehension*, der das gleiche ist, 
 
 ---
 
-# -------------- Trie ----------------
+---
+
+# ACHTUNG: nur für Gelangweilte!
+
+---
+
+# Trie
 Dictionaries sind auch ideal für einfachere tree Strukturen, wie z.B. die sogenannte *trie*-Struktur, womit man eine effizient suchbare Wörterbuch modellieren kann.  
 Um das verstehen zu können, gucken wir erst verschachtelte Dictionaries an.  
 Betrache folgendes Beispiel:  
