@@ -173,17 +173,20 @@ Dict-comprehension geht gleich so, wie List-comprehension, nur ist es halt ein D
 Beispiel: `f_x_hoch_2 = {x: pow(x, 2) for x in range(100)}`
 
 ## A9
-Erstelle einen Dictionary `str_int` *mit Dict-comprehension*, der zufällige strings der Länge 4 als keys, und zufällige Zahlen als values hat!
+Erstelle einen Dictionary `str_int` *mit Dict-comprehension*, der zufällige strings der Länge 4 als keys, und zufällige ganze Zahlen zwischen 0 und 100 als values hat!
 - `str_int` soll 8 Items haben!
-- Benutze dabei `chr(num)`, str * int Multiplikation und `random.randint(start, end)`!
+- Benutze dabei `chr(num)`, die "`str * int` Multiplikation" und `random.randint(start, end)`!
+Beispielergebnis: `{'ffff': 56, 'kkkk': 72, ...}`
 
 ## A10
-Erstelle einen Dict `str_float` *mit Dict-comprehension*, der das gleiche ist, wie `str_int`, nur sollen die Values jetzt floats sein.
-- Benutze dabei `float(num)` und `str_int.items()`!
+Erstelle einen Dict `str_float` *mit Dict-comprehension*, der **exakt das gleiche** ist, wie `str_int`, nur sollen die Values jetzt floats sein.
+- Benutze dabei die eingebaute `float(num)` und `str_int.items()`!
+Beispielergebnis: `{'ffff': 56.0, 'kkkk': 72.0, ...}`
 
 ## A11
 Erstelle einen Dict `str_double` *mit Dict-comprehension*, der das gleiche ist, wie `str_float`, nur sollen die Values jetzt mit 2 multipliziert werden.
-- Benutze dabei `str_int.keys()`, `str_int.values()` und `zip(seq1, seq2)`!
+- Benutze dabei `str_int.keys()`, `str_int.values()` und die eingebaute Funktion `zip(seq1, seq2)`!
+- `str_int.items()` ist verboten!
 
 ---
 
