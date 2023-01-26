@@ -175,12 +175,14 @@ Beispiel: `f_x_hoch_2 = {x: pow(x, 2) for x in range(100)}`
 ## A9
 Erstelle einen Dictionary `str_int` *mit Dict-comprehension*, der zufällige strings der Länge 4 als keys, und zufällige ganze Zahlen zwischen 0 und 100 als values hat!
 - `str_int` soll 8 Items haben!
-- Benutze dabei `chr(num)`, die "`str * int` Multiplikation" und `random.randint(start, end)`!
+- Benutze dabei `chr(num)`, die "`str * int` Multiplikation" und `random.randint(start, end)`!  
+
 Beispielergebnis: `{'ffff': 56, 'kkkk': 72, ...}`
 
 ## A10
 Erstelle einen Dict `str_float` *mit Dict-comprehension*, der **exakt das gleiche** ist, wie `str_int`, nur sollen die Values jetzt floats sein.
-- Benutze dabei die eingebaute `float(num)` und `str_int.items()`!
+- Benutze dabei die eingebaute `float(num)` und `str_int.items()`!  
+
 Beispielergebnis: `{'ffff': 56.0, 'kkkk': 72.0, ...}`
 
 ## A11
