@@ -6,6 +6,9 @@
 > Dabei soll stetig auf richtiges Typing geachtet werden.
 > Die meisten Aufgaben lassen sich einfach mit Rekursion lösen.
 
+### Hinweis zum Blatt:
+- Benutze die `05_tree.py` Datei als Vorlage!`:)`
+
 ### Hinweis zu A1:
 Wenn die Klasse Felder (Instanzvariablen) vom gleichen Typ hat, wie die Klasse selbst (wie in diesem Fall für `left` und `right`), dann muss man die **ganze** Typannotation zwischen Anführungszeichen schreiben.  
 Also wenn man `Optional` benutzt, oder Typen vereinigt, muss man die Anführungszeichen um das ganze setzen.  
