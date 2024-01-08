@@ -11,6 +11,18 @@ def func(arg1, arg2, ..., argN):
 ...kann jetzt einfacher als ein selbstständiger Objekt geschrieben werden: \
 `func = lambda arg1, arg2, ..., argN: statement(arg1, arg2, ..., argN)`
 
+Beispiel:
+```py
+def get_circle_boundary(x, y, r):
+    return [x-r, y-r, x+r, y+r]
+
+get_circle_boundary_2 = lambda x, y, r: [x-r, y-r, x+r, y+r]
+
+boundary1 = get_circle_boundary(80, 50, 3)
+boundary2 = get_circle_boundary_2(80, 50, 3)
+print(boundary1, boundary2)
+```
+
 Fachbegriffe:
 - einstellige Funktion: Funktion mit einem Argument (meistens `n`)
 - zweistellige Funktion: Funktion mit zwei Argumenten (meistens `x` und `y`; oder `a` und `b`)
