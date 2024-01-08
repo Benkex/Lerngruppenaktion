@@ -60,7 +60,7 @@ def gen(n: int):
     # stop, und dann von hier geht's weiter
     yield "Round 2"
     # ende
-    print("Ende. Du hast mir eine Zahl gegeben, ich gebe es zurück, hier:", n)
+    print("Ende. Du hast mir eine Zahl gegeben, ich gebe es hier aus:", n)
     
 g = gen(6)
 print(next(g))
