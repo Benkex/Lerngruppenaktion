@@ -7,46 +7,122 @@
 > nur mit anderen Argumenten. Also quasi nochmal das ganze Bild
 > in einem Teil des Bildes.
 > (Deshalb benutzt man gerne Rekursion, um Fraktalbilder zu erstellen.)
-> Wir werden jetzt einfache Beispiele für rekursion betrachten.
 
-## A1:
+## A1 (Beispielaufgabe:)
+### A1.1 
 Erstelle eine Funktion `try_rekursion`, die als Argument eine ganze Zahl `n` nimmt.
+  ```py
+  def try_recursion(n: int):
+  ```
 - `try_rekursion` soll zuerst ihr Argument ausprinten, 
-- dann sich selbst aufrufen mit `n + 1` oder `n - 1`, dem (Rekursionsargument).
-Probier mal beide Optionen aus.
-- Was ist deine Beobachtung?
-erweitere `try_rekursion` so, dass das letzte was ausgeprintet wird, eine 0 ist! (Das ist die "Rekursionsstoppbedingung")
-- Welche Rekursionsargument brauchst du, wenn das originelle `n` positiv ist?
-- Und wenn es negativ ist? Du kannst eine if-Bedingung dafür schreiben!
+  ```py
+  def try_recursion(n: int):
+      print(n)
+  ```
+- dann sich selbst aufrufen mit `n + 1`.
+  ```py
+  def try_recursion(n: int):
+      print(n)
+      try_recursion(n + 1)
+  ```
+!!! Neuer Begriff:  `try_recursion(n + 1)` nennen wir hier _"rekursiver Aufruf"_ !!!
 
-## A2:
-Erstelle eine Funktion `count_down`, die als Argument eine *positive* ganze Zahl `n` nimmt.
-(`n` darf nicht negativ sein -> wenn es trotzdem negativ ist, erzeuge ein RuntimeError!).
-- `count_down` soll zuerst ihr Argument ausprinten
-- dann wenn `n > 1` gilt, sich selbst zurückgibt mit Argument `n - 1`
-- ansonsten soll `count_down` einfach 1 zurückgeben
+- Was ist deine Beobachtung?  
+  (Du kannst es mit der Tastenkombination `Ctrl + C` stoppen)  
+  Probiere jetzt mit `n - 1`.
+  ```py
+  def try_recursion(n: int):
+      print(n)
+      try_recursion(n - 1)
+  ```
+- Was ist deine Beobachtung?  
+!!! Neuer Begriff:  `n + 1` und `n - 1` nennen wir hier _"Rekursionsargument"_, weil es der Argument des rekursiven Aufrufs ist !!!
+
+### A1.2 
+Erweitere `try_rekursion` so, dass sie bis 0 zählt!
+- Was, wenn das originelle `n` positiv ist? Welche Rekursionsargument brauchst du?
+- Und wenn `n` negativ ist? Du kannst if-Bedingungen dafür schreiben!
+```py
+def try_recursion(n: int):
+    print(n)
+    if n < 0:
+        try_recursion(n + 1)
+    elif n > 0:
+        try_recursion(n - 1)
+```
+!!! Neuer Begriff: `n < 0` nennen wir hier _"Rekursions-stop-bedingung"_ (Rekursionsstopbedingung) !!!
+
+
+
+## A2 (Beispielaufgabe:)
+Erstelle eine Funktion `count_down`, die als Argument eine *positive* ganze Zahl `n` nimmt,  
+( `n` darf nicht negativ sein -> wenn es trotzdem negativ ist, erzeuge ein RuntimeError!
+```py
+def count_down(n: int):
+    if n < 0:
+        throw RuntimeError()
+```
+) und...
+- erst `n` ausgibt (printet),
+  ```py
+  def count_down(n: int):
+      if n < 0:
+          throw RuntimeError()
+      print(n)
+  ```
+- dann einen rekursiven Aufruf macht mit Rekursionsargument `n - 1`, das Ergebnis in einer Variable speichert, und zurückgibt
+  ```py
+  def count_down(n: int):
+      if n < 0:
+          throw RuntimeError()
+      print(n)
+      result = count_down(n - 1)
+      return result
+  ```
+  !!! Neuer Begriff: `result` (den Rückkehrwert vom rekursiven Aufruf) nennen wir hier _"Rekursionsergebnis"_ !!!  
+  ...  
+  Hm, das geht ja wieder unendlich lange.
+- Um es zu stoppen, `count_down` soll jetzt nur dann den rekursiven Aufruf machen, wenn `n > 0` ist. Sonst soll es den String `42` zurückgeben.
+  ```py
+  def count_down(n: int):
+      if n < 0:
+          throw RuntimeError()
+      print(n)
+      if n > 0:
+          result = count_down(n - 1)
+      else:
+          result = 42
+      return result
+  ```
+> Was gibt `count_down` zurück, wenn ich sie mit `6` aufrufe? (Probiere `result = count_down(6)` und `print(result)` ! )  
+> Und mit `12`? (Probiere `result = count_down(12)` und `print(result)` ! )  
+> Denke über das Ergebnis nach! Warum ist das rausgekommen und wie?
+
+---
+
+Ok, Du bist dran! :-)
+
+---
 
 ## A3:
-Erstelle eine Funktion `count_to_n`, die als Argument eine *positive* ganze Zahl `n` nimmt.
+Erstelle eine Funktion `count_to_n`, die als Argument eine *positive* ganze Zahl `n` nimmt. ( `n` darf nicht negativ sein! )
 - `count_to_n` soll zuerst ihr Argument ausprinten
 - dann wenn `n > 1` gilt,  1 + sich selbst zurückgibt mit Argument `n - 1`
 - ansonsten soll `count_to_n` einfach 1 zurückgeben
 > Was gibt `count_to_n` am Ende zurück?
 
 ## A4:
-Erstelle eine Funktion `double_up`, die als Argument eine *positive* ganze Zahl `n` nimmt.
-- `double_up` soll zuerst ihr Argument ausprinten
-- dann das Zweifache von sich selbst mit Argument `n - 1` zurückgibt, falls `n > 1` gilt.
-- ansonsten soll 2 zurückgeben werden
-> Was gibt `double_up` am Ende zurück?
+Erstelle eine Funktion `two_to_the`, die als Argument eine *positive* ganze Zahl `n` nimmt. ( `n` darf nicht negativ sein! )  
+Diese Funktion soll 2^n (2 hoch n) zurückgeben. Wenn `n > 0`, die Funktion soll einen rekursiven Aufruf machen mit Rekursionsargument `n - 1`,
+dann das Rekursionsergebnis davon mit `2` multiplizieren und das Endergebnis zurückgeben.
+Sonst soll die Funktion 1 zurückgeben.
 
 ## A5:
-Erstelle eine Funktion `sum_up`, die als Argument eine *positive* ganze Zahl `n` nimmt,  
-dann alle Zahlen von `n` bis `0` aufsummiert (`n + (n - 1) + ... + 2 + 1 + 0`)
-und diesen Wert dann zurückgibt.
+Erstelle eine Funktion `sum_up`, die als Argument eine *positive* ganze Zahl `n` nimmt, ( `n` darf nicht negativ sein! )  
+dann alle Zahlen von `n` bis `0` aufsummiert (`n + (n - 1) + ... + 2 + 1 + 0`) und diesen Wert dann zurückgibt.
 
 ## A6:
-Erstelle eine rekursive Funktion `fakul`,  die als Argument eine *positive* ganze Zahl `n` nimmt 
+Erstelle eine rekursive Funktion `fakul`,  die als Argument eine *positive* ganze Zahl `n` nimmt ( `n` darf nicht negativ sein! )
 und die Fakultät von n ausrechnet! Die Fakultät einer Zahl `n` berechnet sich 
 als Produkt aller Zahlen von `1` bis `n`.
 
