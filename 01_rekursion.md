@@ -61,8 +61,9 @@ Erstelle eine Funktion `count_down`, die als Argument eine *positive* ganze Zahl
 def count_down(n: int):
     assert n >= 0, "n muss >= 0 sein!"
 ```
-Versuche mal z.B. `count_down(-3)` aufzurufen!  
-) und...
+Versuche mal z.B. `count_down(-3)` aufzurufen! )  
+  
+und...
 - erst `n` ausgibt (printet),
   ```py
   def count_down(n: int):
