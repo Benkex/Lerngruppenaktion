@@ -60,21 +60,21 @@ Erstelle eine Funktion `count_down`, die als Argument eine *positive* ganze Zahl
 ```py
 def count_down(n: int):
     if n < 0:
-        throw RuntimeError()
+        raise RuntimeError()
 ```
 ) und...
 - erst `n` ausgibt (printet),
   ```py
   def count_down(n: int):
       if n < 0:
-          throw RuntimeError()
+          raise RuntimeError()
       print(n)
   ```
 - dann einen rekursiven Aufruf macht mit Rekursionsargument `n - 1`, das Ergebnis in einer Variable speichert, und zurückgibt
   ```py
   def count_down(n: int):
       if n < 0:
-          throw RuntimeError()
+          raise RuntimeError()
       print(n)
       result = count_down(n - 1)
       return result
@@ -86,7 +86,7 @@ def count_down(n: int):
   ```py
   def count_down(n: int):
       if n < 0:
-          throw RuntimeError()
+          raise RuntimeError()
       print(n)
       if n > 0:
           result = count_down(n - 1)
