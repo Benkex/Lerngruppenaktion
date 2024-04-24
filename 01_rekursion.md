@@ -60,40 +60,27 @@ Erstelle eine Funktion `count_down`, die als Argument eine *positive* ganze Zahl
 ```py
 def count_down(n: int):
     if n < 0:
-        raise RuntimeError()
+        raise RuntimeError("n muss größer als 0 sein!")
 ```
 ) und...
 - erst `n` ausgibt (printet),
   ```py
   def count_down(n: int):
       if n < 0:
-          raise RuntimeError()
+          raise RuntimeError("n muss größer als 0 sein!")
       print(n)
   ```
 - dann einen rekursiven Aufruf macht mit Rekursionsargument `n - 1`, das Ergebnis in einer Variable speichert, und zurückgibt
   ```py
   def count_down(n: int):
       if n < 0:
-          raise RuntimeError()
+          raise RuntimeError("n muss größer als 0 sein!")
       print(n)
       result = count_down(n - 1)
       return result
   ```
   !!! Neuer Begriff: `result` (den Rückkehrwert vom rekursiven Aufruf) nennen wir hier _"Rekursionsergebnis"_ !!!  
-  ...  
-  Hm, das geht ja wieder unendlich lange.
-- Um es zu stoppen, `count_down` soll jetzt nur dann den rekursiven Aufruf machen, wenn `n > 0` ist. Sonst soll es den String `42` zurückgeben.
-  ```py
-  def count_down(n: int):
-      if n < 0:
-          raise RuntimeError()
-      print(n)
-      if n > 0:
-          result = count_down(n - 1)
-      else:
-          result = 42
-      return result
-  ```
+
 > Was gibt `count_down` zurück, wenn ich sie mit `6` aufrufe? (Probiere `result = count_down(6)` und `print(result)` ! )  
 > Und mit `12`? (Probiere `result = count_down(12)` und `print(result)` ! )  
 > Denke über das Ergebnis nach! Warum ist das rausgekommen und wie?
