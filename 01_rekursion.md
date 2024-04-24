@@ -56,25 +56,23 @@ def try_recursion(n: int):
 
 ## A2 (Beispielaufgabe:)
 Erstelle eine Funktion `count_down`, die als Argument eine *positive* ganze Zahl `n` nimmt,  
-( `n` darf nicht negativ sein -> wenn es trotzdem negativ ist, erzeuge ein RuntimeError!
+( `n` darf nicht negativ sein -> das kannst Du mit `assert` kontrollieren:
 ```py
 def count_down(n: int):
-    if n < 0:
-        raise RuntimeError("n muss größer als 0 sein!")
+    assert n >= 0, "n muss >= 0 sein!"
 ```
+Versuche mal z.B. `count_down(-3)` aufzurufen!
 ) und...
 - erst `n` ausgibt (printet),
   ```py
   def count_down(n: int):
-      if n < 0:
-          raise RuntimeError("n muss größer als 0 sein!")
+      assert n >= 0, "n muss >= 0 sein!"
       print(n)
   ```
 - dann einen rekursiven Aufruf macht mit Rekursionsargument `n - 1`, das Ergebnis in einer Variable speichert, und zurückgibt
   ```py
   def count_down(n: int):
-      if n < 0:
-          raise RuntimeError("n muss größer als 0 sein!")
+      assert n >= 0, "n muss >= 0 sein!"
       print(n)
       result = count_down(n - 1)
       return result
